@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1280 145.5" style="enable-background:new 0 0 1280 145.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{opacity:0.6;fill:#FFFFFF;enable-background:new    ;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:none;stroke:#8E6919;stroke-width:0.5;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#CEB781;stroke-width:0.5;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#CEB781;stroke-width:0.25;stroke-miterlimit:10;}
+	.st6{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+</style>
+<title>bg-wave</title>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="-2" y="-1" width="1284" height="146.5"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		<path class="st1" d="M-1.9,37.8c0,0,185.3-56.7,571.8,16.1c297,55.9,533.1,54.9,711.5-39.2l-0.8,86.2l-1282.5,8V37.8z"/>
+		<path class="st1" d="M-1.9,51.3c0,0,203-62.4,589.5,10.4c297,56,529.3,48.7,693.8-25.5l-0.8,73.4L-2,117.6V51.3H-1.9z"/>
+		<path class="st2" d="M-1.9,75.3c0,0,171.3-71.9,563.1-12.8c301.1,45.4,534.4,64.6,720.2-16v98.2L-1.9,145.5V75.3z"/>
+		<path class="st3" d="M-1.9,61.7c0,0,260.7-82.2,567.5-4s564.5,51.1,715.8-31.1"/>
+		<path class="st4" d="M591.1,64.5c374,77.4,539.4,36.7,690.8-45.5"/>
+		<path class="st5" d="M-1.4,45.4c0,0,209.3-77,556.4,5.6c389,92.5,575.5,30.3,726.9-51.9"/>
+	</g>
+</g>
+<rect x="-20" y="111.5" class="st6" width="1343" height="99"/>
+</svg>
