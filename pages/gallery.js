@@ -22,10 +22,10 @@ export default function Gallery() {
     }
 
     document.querySelector(".Comps_logo_white__IYx_N").style.display = "none";
+    if (router.query.tab) {
+      setTab(router.query.tab);
+    }
   }, []);
-  // if (router.query.tab) {
-  //   setTab(router.query.tab);
-  // }
 
   const router = useRouter();
   console.log(router.query);
