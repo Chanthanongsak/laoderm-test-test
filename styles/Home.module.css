@@ -75,7 +75,7 @@
 }
 
 .rightFlex{
-  padding-left: 20px;
+  padding-left: 50px;
 }
 
 .leftFlex{
@@ -172,7 +172,7 @@
 .btn_in_hover{
   background: inherit;
     border-color: white;
-    padding: 5px 40px;
+    padding: 10px 40px;
     color: white;
     margin-top: 20px;
     cursor: pointer;
@@ -193,7 +193,8 @@
 .absoluteBox{
   border: 1px solid;
   background: #EAE6E3;
-  padding: 40px 105px 50px 20px;
+  padding: 40px 150px 50px 30px;
+  height : 360px;
   position: absolute;
   top: 30px;
   width: 47%;
@@ -204,7 +205,8 @@
 .absoluteRoomBox{
   border: 1px solid;
   background: #EAE6E3;
-  padding: 40px 50px 50px;
+  padding: 40px 50px;
+  height: 360px;
   position: absolute;
   top: 30px;
   width: 47%;
@@ -214,6 +216,8 @@
 
 .absoluteRoomBox p{
   margin: 30px 0 40px;
+  text-align: justify;
+  line-height: 1.5
 }
 
 .absoluteBox .fontGold{
@@ -222,11 +226,13 @@
 
 .absoluteBox p{
   margin: 30px 0 60px;
+  text-align: justify;
+  line-height: 1.5;
 }
 
 .btn_absolute{
   background: #CBB67E;
-  padding: 8px 50px;
+  padding: 13px 50px;
   font-weight: bold;
   cursor: pointer;
   border-style: none;
@@ -294,12 +300,12 @@
 
 .absolutePic{
   width: 58.2%;
-  height: 372px;
+  height: 420px;
 }
 
 .absoluteRoomPic{
   width: 58.2%;
-  height: 375px;
+  height: 420px;
 }
 
 .right{
@@ -320,6 +326,8 @@
 .leftFlexService{
   width: 39%;
   padding-top: 30px;
+  text-align: justify;
+  line-height: 1.5;
 }
 
 .leftFlexService .underPicServices{
@@ -328,6 +336,10 @@
 
 .rightFlexService{
   width: 61%;
+}
+
+.rightFlexService .mgT{
+  padding-top: 50px;
 }
 
 /* .imgScale{
@@ -351,6 +363,20 @@
   object-fit: cover;
 }
 
+.imgScale:hover .heightImgHoverOverlay{
+  height: 65%;
+  /* height: 200px; */
+}
+
+.heightImgHoverOverlay{
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.heightImgHoverOverlay img{
+  object-fit: cover;
+}
+
 .imgScale:hover .fontInPic{
   visibility: hidden;
 }
@@ -359,14 +385,19 @@
   padding: 20px 2.5vw;
   position: absolute;
   top: 40%;
+  text-align: justify;
 }
 
 .pdInSlidePic h1{
   font-size: 25px;
+  text-align: justify;
+  line-height: 1.5;
 }
 
 .pdInSlidePic p{
   margin-top: 15px;
+  text-align: justify;
+  line-height: 1.5;
 }
 
 .z100{
@@ -432,7 +463,7 @@
 .monoFont{
   
   font-family: monospace;
-  font-size: 20px;
+  font-size: 22px;
 
 }
 
@@ -456,4 +487,14 @@
 
 .leftFlexService .mg{
   margin: 30px 0 40px;
+}
+
+.leftFlexService .pd{
+  padding-right: 60px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .heightImgHoverOverlay{
+    height: 500px
+  }
 }

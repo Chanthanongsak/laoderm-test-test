@@ -74,6 +74,35 @@ export default function Service() {
 
   const mainSlide = ["/sv1.jpg", "/sv2.jpg", "/pool.jpg"];
 
+  const hoverImg = [
+    {
+      img: gym,
+      h1: "Pool & Gym",
+      p: " Our secluded pool, nestled into a private mezzanine location, offers a comfortable place to relax and recharge in the cool refreshing water.<br> For more active guests, a fully-equipped gym is located overlooking the pool",
+      href: "/gallery?tab=tab5",
+    },
+    { img: sauna, h1: "Steam and Sauna", p: "", href: "/gallery?tab=tab5_2" },
+    {
+      img: spa,
+      h1: "Souphattra Spa",
+      p: "The Souphattra Spa provides a tranquil and calming space in which to delight in our specially designed treatments, leaving you feeling relaxed and revitalized.",
+      href: "/gallery?tab=tab5_3",
+    },
+    {
+      img: SPT_restaurant,
+      h1: "Souphattra Restaurant",
+      p: "Our restaurant is a destination in itself, offering a range of cuisines both International and Lao, served in a beautiful and elegant setting",
+      href: "/gallery?tab=tab5_4",
+    },
+    {
+      img: cigar,
+      h1: "Cigar Bar",
+      p: "The Souphattra Cigar Bar is an elegant and welcoming place in  which to kick back and enjoy a drink in one of the comfortable chairs.",
+      href: "/gallery?tab=tab5_5",
+    },
+    { img: lobby, h1: "Lobby Bar", p: "", href: "/gallery?tab=tab5_6" },
+  ];
+
   return (
     <>
       <div className={styles.bg}>
@@ -131,17 +160,19 @@ export default function Service() {
               data-aos-duration="1000"
               className={[styles.leftFlexService]}
             >
-              <h3 className={[styles.fontGold, styles.monoFont].join(" ")}>
-                SOUPHATTRA APARTMENTS OFFERS A SUPERB SELECTION OF FACILITIES
-                FOR GUESTS TO ENJOY DURING THEIR STAY
-              </h3>
-              <p className={styles.mg}>
-                A stay at Souphattra Serviced Apartments is a chance to unwind
-                after a busy day. Whether it’s for a refreshing post-work dip in
-                our stylish pool, a calming treatment in the Souphattra Spa, or
-                a cocktail and dinner in our elegantly designed bar &
-                restaurant, you can rest assured that relaxation awaits.
-              </p>
+              <div className={[styles.pd]}>
+                <h3 className={[styles.fontGold, styles.monoFont].join(" ")}>
+                  SOUPHATTRA APARTMENTS OFFERS A SUPERB SELECTION OF FACILITIES
+                  FOR GUESTS TO ENJOY DURING THEIR STAY
+                </h3>
+                <p className={styles.mg}>
+                  A stay at Souphattra Serviced Apartments is a chance to unwind
+                  after a busy day. Whether it’s for a refreshing post-work dip
+                  in our stylish pool, a calming treatment in the Souphattra
+                  Spa, or a cocktail and dinner in our elegantly designed bar &
+                  restaurant, you can rest assured that relaxation awaits.
+                </p>
+              </div>
               <div
                 className={[
                   styles.bg,
@@ -168,7 +199,7 @@ export default function Service() {
                 className={[
                   styles.inheritImg,
                   styles.underPicServices,
-                  styles.mgTop20,
+                  styles.mgT,
                 ].join(" ")}
                 data-aos="fade-left"
                 data-aos-duration="1500"
@@ -184,202 +215,49 @@ export default function Service() {
 
       <div data-aos="fade-up" data-aos-duration="1000">
         <div className={[styles.flex_service]}>
-          <div className={[styles.imgScale, styles.posrelative].join(" ")}>
-            <div
-              className={[
-                styles.inheritImg,
-                styles.height100,
-                styles.posrelative,
-                styles.z100,
-              ].join(" ")}
-            >
-              <Image alt="/" src={gym} width="1000" height="730" />
-              <div className={styles.fontInPic}>
-                <h3>Pool & Gym</h3>
-              </div>
-            </div>
-            <div
-              className={[
-                styles.pdInSlidePic,
-                styles.posrelative,
-                styles.wd100,
-              ].join(" ")}
-            >
-              <h1>Pool & Gym</h1>
-              <p className={[styles.mg].join(" ")}>
-                Our secluded pool, nestled into a private mezzanine location,
-                offers a comfortable place to relax and recharge in the cool
-                refreshing water.<br></br> For more active guests, a
-                fully-equipped gym is located overlooking the pool.
-              </p>
-            </div>
-            <div className={[styles.btnUnderSlidePic].join(" ")}>
-              <Link href="/gallery?tab=tab5">
-                <button className={styles.btn_absolute}>Explore more</button>
-              </Link>
-            </div>
-          </div>
-
-          <div className={[styles.imgScale, styles.posrelative].join(" ")}>
-            <div
-              className={[
-                styles.inheritImg,
-                styles.height100,
-                styles.posrelative,
-                styles.z100,
-              ].join(" ")}
-            >
-              <Image width="1000" height="730" alt="/" src={sauna} />
-              <div className={styles.fontInPic}>
-                <h3>Steam and Sauna </h3>
-              </div>
-            </div>
-            <div
-              className={[
-                styles.pdInSlidePic,
-                styles.posrelative,
-                styles.wd100,
-              ].join(" ")}
-            >
-              <h1>Steam and Sauna </h1>
-            </div>
-            <div className={[styles.btnUnderSlidePic].join(" ")}>
-              <Link href="/gallery?tab=tab5_2">
-                <button className={styles.btn_absolute}>Explore more</button>
-              </Link>
-            </div>
-          </div>
-          <div className={[styles.imgScale, styles.posrelative].join(" ")}>
-            <div
-              className={[
-                styles.inheritImg,
-                styles.height100,
-                styles.posrelative,
-                styles.z100,
-              ].join(" ")}
-            >
-              <Image width="1000" height="730" alt="/" src={spa} />
-              <div className={styles.fontInPic}>
-                <h3>Souphattra Spa</h3>
-              </div>
-            </div>
-            <div
-              className={[
-                styles.pdInSlidePic,
-                styles.posrelative,
-                styles.wd100,
-              ].join(" ")}
-            >
-              <h1>Souphattra Spa</h1>
-              <p className={[styles.mg].join(" ")}>
-                The Souphattra Spa provides a tranquil and calming space in
-                which to delight in our specially designed treatments, leaving
-                you feeling relaxed and revitalized.
-              </p>
-            </div>
-            <div className={[styles.btnUnderSlidePic].join(" ")}>
-              <Link href="/gallery?tab=tab5_3">
-                <button className={styles.btn_absolute}>Explore more</button>
-              </Link>
-            </div>
-          </div>
-          <div className={[styles.imgScale, styles.posrelative].join(" ")}>
-            <div
-              className={[
-                styles.inheritImg,
-                styles.height100,
-                styles.posrelative,
-                styles.z100,
-              ].join(" ")}
-            >
-              <Image width="1000" height="730" alt="/" src={SPT_restaurant} />
-              <div className={styles.fontInPic}>
-                <h3>Souphattra Restaurant </h3>
-              </div>
-            </div>
-            <div
-              className={[
-                styles.pdInSlidePic,
-                styles.posrelative,
-                styles.wd100,
-              ].join(" ")}
-            >
-              <h1>Souphattra Restaurant </h1>
-              <p className={[styles.mg].join(" ")}>
-                Our restaurant is a destination in itself, offering a range of
-                cuisines both International and Lao, served in a beautiful and
-                elegant setting
-              </p>
-            </div>
-            <div className={[styles.btnUnderSlidePic].join(" ")}>
-              <Link href="/gallery?tab=tab5_4">
-                <button className={styles.btn_absolute}>Explore more</button>
-              </Link>
-            </div>
-          </div>
-          <div className={[styles.imgScale, styles.posrelative].join(" ")}>
-            <div
-              className={[
-                styles.inheritImg,
-                styles.height100,
-                styles.posrelative,
-                styles.z100,
-              ].join(" ")}
-            >
-              <Image width="1000" height="730" alt="/" src={cigar} />
-              <div className={styles.fontInPic}>
-                <h3>Cigar Bar</h3>
-              </div>
-            </div>
-            <div
-              className={[
-                styles.pdInSlidePic,
-                styles.posrelative,
-                styles.wd100,
-              ].join(" ")}
-            >
-              <h1>Cigar Bar</h1>
-              <p className={[styles.mg].join(" ")}>
-                The Souphattra Cigar Bar is an elegant and welcoming place in
-                which to kick back and enjoy a drink in one of the comfortable
-                chairs.
-              </p>
-            </div>
-            <div className={[styles.btnUnderSlidePic].join(" ")}>
-              <Link href="/gallery?tab=tab5_5">
-                <button className={styles.btn_absolute}>Explore more</button>
-              </Link>
-            </div>
-          </div>
-          <div className={[styles.imgScale, styles.posrelative].join(" ")}>
-            <div
-              className={[
-                styles.inheritImg,
-                styles.height100,
-                styles.posrelative,
-                styles.z100,
-              ].join(" ")}
-            >
-              <Image width="1000" height="730" alt="/" src={lobby} />
-              <div className={styles.fontInPic}>
-                <h3>Lobby Bar </h3>
-              </div>
-            </div>
-            <div
-              className={[
-                styles.pdInSlidePic,
-                styles.posrelative,
-                styles.wd100,
-              ].join(" ")}
-            >
-              <h1>Lobby Bar </h1>
-            </div>
-            <div className={[styles.btnUnderSlidePic].join(" ")}>
-              <Link href="/gallery?tab=tab5_6">
-                <button className={styles.btn_absolute}>Explore more</button>
-              </Link>
-            </div>
-          </div>
+          {hoverImg.map((h) => {
+            return (
+              <>
+                <div
+                  className={[styles.imgScale, styles.posrelative].join(" ")}
+                >
+                  <div
+                    className={[
+                      styles.inheritImg,
+                      styles.heightImgHoverOverlay,
+                      styles.posrelative,
+                      styles.z100,
+                    ].join(" ")}
+                  >
+                    <Image alt="/" src={h.img} width="1000" height="730" />
+                    <div className={styles.fontInPic}>
+                      <h3>{h.h1}</h3>
+                    </div>
+                  </div>
+                  <div
+                    className={[
+                      styles.pdInSlidePic,
+                      styles.posrelative,
+                      styles.wd100,
+                    ].join(" ")}
+                  >
+                    <h1>{h.h1}</h1>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: h.p }}
+                      className={[styles.mg].join(" ")}
+                    ></p>
+                  </div>
+                  <div className={[styles.btnUnderSlidePic].join(" ")}>
+                    <Link href={`${h.href}`}>
+                      <button className={styles.btn_absolute}>
+                        Explore more
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
 

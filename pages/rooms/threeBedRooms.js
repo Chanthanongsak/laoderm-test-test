@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 // import scrollBlack from "../menu_navbar/scrollBlack";
+import Link from "next/link";
 
 export default function ThreeBedRooms() {
   useEffect(() => {
@@ -37,6 +38,7 @@ export default function ThreeBedRooms() {
     }
 
     document.querySelector(".Comps_logo_white__IYx_N").style.display = "none";
+    document.querySelector(".Comps_logo_black__PFiee").style.display = "flex";
 
     if (window.location.pathname === "/rooms/threeBedRooms") {
       document.querySelector(".Room").style.color = "rgb(203, 182, 126)";
@@ -203,9 +205,11 @@ export default function ThreeBedRooms() {
                   <div className="view-detail">
                     <p>One Bedroom Suite</p>
                     <p>SIZE: 62 - 82 sqm</p>
-                    <button>
-                      <a href="two-bedroom.html">VIEW DETAILS</a>
-                    </button>
+                    <Link href="/rooms/oneBedRooms">
+                      <button>
+                        <a href="two-bedroom.html">VIEW DETAILS</a>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -215,9 +219,11 @@ export default function ThreeBedRooms() {
                   <div className="view-detail">
                     <p>Two Bedroom Suite</p>
                     <p>SIZE: 114 sqm</p>
-                    <button>
-                      <a href="three-bedroom.html">VIEW DETAILS</a>
-                    </button>
+                    <Link href="/rooms/twoBedRooms">
+                      <button>
+                        <a href="three-bedroom.html">VIEW DETAILS</a>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

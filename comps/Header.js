@@ -270,7 +270,7 @@ function Header() {
 
   return (
     <>
-      <div className={[styles.fix].join(" ")}>
+      <div className={[styles.fix, styles.navHeight].join(" ")}>
         <div className={[styles.flex, styles.container_nav].join(" ")}>
           <div className={styles.any_flex}>
             <div className={styles.allLogoLD}>
@@ -298,94 +298,103 @@ function Header() {
             </div>
 
             <div className={styles.menu}>
-              {/* <div> */}
-              <div
-                onClick={() => onTitleClick("title2")}
-                className={
-                  currentRoute === "/rooms" ? "Room active-nav" : "Room "
-                }
-              >
-                <Link href="/rooms">ROOMS</Link>
-                <div className="dropdown-content">
-                  <Link href="/rooms/oneBedRooms">
-                    <a
-                      onClick={() => onTitleClick("title2")}
-                      className={
-                        currentRoute === "/rooms/oneBedRooms"
-                          ? "oneBedRooms active-nav"
-                          : "oneBedRooms "
-                      }
-                    >
-                      ONE BEDROOM SUITES
-                    </a>
-                  </Link>
-                  <Link href="/rooms/twoBedRooms">
-                    <a
-                      onClick={() => onTitleClick("title2")}
-                      className={
-                        currentRoute === "/rooms/twoBedRooms"
-                          ? "twoBedRooms active-nav"
-                          : "twoBedRooms "
-                      }
-                    >
-                      TWO BEDROOM SUITES
-                    </a>
-                  </Link>
-                  <Link href="/rooms/threeBedRooms">
-                    <a
-                      className={
-                        currentRoute === "/rooms/threeBedRooms"
-                          ? "threeBedRooms active-nav"
-                          : "threeBedRooms "
-                      }
-                    >
-                      THREE BEDROOM SUITES
-                    </a>
-                  </Link>
+              <div className={styles.borderRightNav}>
+                <div
+                  onClick={() => onTitleClick("title2")}
+                  className={
+                    currentRoute === "/rooms" ? "Room active-nav" : "Room "
+                  }
+                >
+                  <Link href="/rooms">ROOMS</Link>
+                  <div className="dropdown-content">
+                    <Link href="/rooms/oneBedRooms">
+                      <a
+                        onClick={() => onTitleClick("title2")}
+                        className={
+                          currentRoute === "/rooms/oneBedRooms"
+                            ? "oneBedRooms active-nav"
+                            : "oneBedRooms "
+                        }
+                      >
+                        ONE BEDROOM SUITES
+                      </a>
+                    </Link>
+                    <Link href="/rooms/twoBedRooms">
+                      <a
+                        onClick={() => onTitleClick("title2")}
+                        className={
+                          currentRoute === "/rooms/twoBedRooms"
+                            ? "twoBedRooms active-nav"
+                            : "twoBedRooms "
+                        }
+                      >
+                        TWO BEDROOM SUITES
+                      </a>
+                    </Link>
+                    <Link href="/rooms/threeBedRooms">
+                      <a
+                        className={
+                          currentRoute === "/rooms/threeBedRooms"
+                            ? "threeBedRooms active-nav"
+                            : "threeBedRooms "
+                        }
+                      >
+                        THREE BEDROOM SUITES
+                      </a>
+                    </Link>
+                  </div>
                 </div>
+                <span></span>
               </div>
-              {/* </div> */}
 
-              <span></span>
-              <Link href="/services">
-                <a
-                  onClick={() => onTitleClick("title3")}
-                  className={
-                    currentRoute === "/services"
-                      ? "Service active-nav"
-                      : "Service "
-                  }
-                >
-                  SERVICES
-                </a>
-              </Link>
-              <span></span>
-              <Link href="/gallery">
-                <a
-                  onClick={() => onTitleClick("title4")}
-                  className={
-                    currentRoute === "/gallery"
-                      ? "Gallery active-nav"
-                      : "Gallery "
-                  }
-                >
-                  GALLERY
-                </a>
-              </Link>
-              <span></span>
-              <Link href="/contact">
-                <a
-                  onClick={() => onTitleClick("title5")}
-                  className={
-                    currentRoute === "/contact"
-                      ? "Contact active-nav"
-                      : "Contact "
-                  }
-                >
-                  CONTACT
-                </a>
-              </Link>
-              <span></span>
+              <div className={styles.borderRightNav}>
+                <Link href="/services">
+                  <a
+                    onClick={() => onTitleClick("title3")}
+                    className={
+                      currentRoute === "/services"
+                        ? "Service active-nav"
+                        : "Service "
+                    }
+                  >
+                    SERVICES
+                  </a>
+                </Link>
+                <span></span>
+              </div>
+
+              <div className={styles.borderRightNav}>
+                <Link href="/gallery">
+                  <a
+                    onClick={() => onTitleClick("title4")}
+                    className={
+                      currentRoute === "/gallery"
+                        ? "Gallery active-nav"
+                        : "Gallery "
+                    }
+                  >
+                    GALLERY
+                  </a>
+                </Link>
+                <span></span>
+              </div>
+
+              <div className={styles.borderRightNav}>
+                <Link href="/contact">
+                  <a
+                    onClick={() => onTitleClick("title5")}
+                    className={
+                      currentRoute === "/contact"
+                        ? "Contact active-nav"
+                        : "Contact "
+                    }
+                  >
+                    CONTACT
+                  </a>
+                </Link>
+                <span></span>
+              </div>
+
               <Link href="/careers">
                 <a
                   onClick={() => onTitleClick("title6")}
@@ -401,10 +410,16 @@ function Header() {
             </div>
           </div>
           <div className={[styles.nav_end, styles.flex].join(" ")}>
-            <div className={[styles.logoNav]}>
-              <Image alt="" src={youtube} />
-              <Image alt="" src={ig} />
-              <Image alt="" src={facebook} />
+            <div className={[styles.logoNav].join(" ")}>
+              <div className={[styles.spanUnsetY]}>
+                <Image alt="" src={youtube} />
+              </div>
+              <div className={[styles.spanUnset]}>
+                <Image alt="" src={ig} />
+              </div>
+              <div className={[styles.spanUnset]}>
+                <Image alt="" src={facebook} />
+              </div>
             </div>
             <div className={styles.enquires}>
               <a

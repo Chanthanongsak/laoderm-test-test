@@ -38,6 +38,7 @@ export default function OneBedRooms() {
     }
 
     document.querySelector(".Comps_logo_white__IYx_N").style.display = "none";
+    document.querySelector(".Comps_logo_black__PFiee").style.display = "flex";
 
     if (window.location.pathname === "/rooms/oneBedRooms") {
       document.querySelector(".Room").style.color = "rgb(203, 182, 126)";
@@ -204,11 +205,11 @@ export default function OneBedRooms() {
                   <div className="view-detail">
                     <p>Two Bedroom Suite</p>
                     <p>SIZE: 114 sqm</p>
-                    <button>
-                      <Link href="/rooms/twoBedRooms">
+                    <Link href="/rooms/twoBedRooms">
+                      <button>
                         <a>VIEW DETAILS</a>
-                      </Link>
-                    </button>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -218,9 +219,11 @@ export default function OneBedRooms() {
                   <div className="view-detail">
                     <p>Three Bedroom Suite</p>
                     <p>SIZE: 147 sqm</p>
-                    <button>
-                      <a href="three-bedroom.html">VIEW DETAILS</a>
-                    </button>
+                    <Link href="/rooms/threeBedRooms">
+                      <button>
+                        <a>VIEW DETAILS</a>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

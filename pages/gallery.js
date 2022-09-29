@@ -52,6 +52,7 @@ export default function Gallery() {
     document.querySelector(".Comps_logo_white__IYx_N").style.display = "none";
     if (router.query.tab) {
       setTab(router.query.tab);
+      document.querySelector(".Comps_logo_white__IYx_N").style.display = "flex";
     }
   }, []);
 

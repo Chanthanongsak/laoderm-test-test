@@ -3,7 +3,7 @@
 }
 
 .container_nav{
-  padding-left: 20px;
+  padding-left: 40px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -35,23 +35,23 @@
 .menu{
   display: flex;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .menu a:hover{
   color: rgb(203, 182, 126);
 }
 
-.menu p{
+/* .menu p{
   margin-left: 10px;
-}
+} */
 
-.menu span{
+/* .menu span{
   width: 1px;
   background-color: black;
   margin: 18px 0;
   margin-right: 10px;
-}
+} */
 
 .footer{
   background: #42413F;
@@ -158,7 +158,7 @@
 }
 
 .btnContact{
-  padding: 8px 40px;
+  padding: 13px 40px;
   background: #C1AE7A;
   border: none;
   color: #5B4A1C;
@@ -223,18 +223,17 @@
 }
 
 .logoNav{
-  height: 30px;
-  padding: 20.5px 20px;
+  height: 50px;
+  padding: 0 20px;
   display: flex;
   align-items: center
 }
 
-.logoNav img{
-  padding: 0 5px !important;
-}
-
 .enquires{
-  padding: 10px 20px;
+  padding: 0px 40px;
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -267,4 +266,39 @@
 .abNavLogo{
   width: 30px;
   height: 30px;
+}
+
+.spanUnset span{
+  /* position: unset !important; */
+  width: 25px !important;
+  height: 25px !important;
+  margin-top: 4px !important;
+}
+
+.spanUnsetY span{
+  width: 36px !important;
+  height: 25px !important;
+  margin-top: 4px !important;
+}
+
+.navHeight{
+  height: 50px
+}
+
+.logoNav div{
+  padding: 0 10px;
+}
+
+.borderRightNav{
+  position: relative;
+    padding-right: 40px;
+}
+
+.borderRightNav span{
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  top: 4px;
+  background: white;
+  right: 20px;
 }

@@ -45,6 +45,7 @@ export default function Rooms() {
     }
 
     document.querySelector(".Comps_logo_black__PFiee").style.display = "none";
+    document.querySelector(".Comps_logo_white__IYx_N").style.display = "flex";
 
     AOS.init({
       easing: "ease-out-cubic",
@@ -213,9 +214,11 @@ export default function Rooms() {
                 They are impeccably welldesigned and feature all the desired
                 amenities for the modern traveler.
               </p>
-              <button className={styles.btn_absolute}>
-                <Link href="/rooms/oneBedRooms">DISCOVER MORE DETAILS</Link>
-              </button>
+              <Link href="/rooms/oneBedRooms">
+                <button className={styles.btn_absolute}>
+                  DISCOVER MORE DETAILS
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -244,9 +247,11 @@ export default function Rooms() {
                 2-bedroom suites are exquisitely designed and provide a
                 luxurious option for Vientiane accommodation.
               </p>
-              <button className={styles.btn_absolute}>
-                <Link href="/rooms/twoBedRooms">DISCOVER MORE DETAILS</Link>
-              </button>
+              <Link href="/rooms/twoBedRooms">
+                <button className={styles.btn_absolute}>
+                  DISCOVER MORE DETAILS
+                </button>
+              </Link>
             </div>
           </div>
           <div
@@ -288,9 +293,11 @@ export default function Rooms() {
                 Souphattra design, with an extensive lounge area, spacious and
                 luxurious master bedroom, and two further bedrooms.
               </p>
-              <button className={styles.btn_absolute}>
-                <Link href="/rooms/threeBedRooms">DISCOVER MORE DETAILS</Link>
-              </button>
+              <Link href="/rooms/threeBedRooms">
+                <button className={styles.btn_absolute}>
+                  DISCOVER MORE DETAILS
+                </button>
+              </Link>
             </div>
           </div>
         </div>

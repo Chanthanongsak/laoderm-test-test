@@ -51,6 +51,7 @@ export default function Home() {
     }
 
     document.querySelector(".Comps_logo_black__PFiee").style.display = "none";
+    document.querySelector(".Comps_logo_white__IYx_N").style.display = "flex";
 
     AOS.init({
       easing: "ease-out-cubic",
