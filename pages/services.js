@@ -250,7 +250,7 @@ export default function Service() {
                   <div className={[styles.btnUnderSlidePic].join(" ")}>
                     <Link href={`${h.href}`}>
                       <button className={styles.btn_absolute}>
-                        Explore more
+                        EXPLORE MORE
                       </button>
                     </Link>
                   </div>
