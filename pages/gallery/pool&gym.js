@@ -1,8 +1,16 @@
 import React, { useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
 import Image from "next/image";
+import { useRouter } from 'next/router'
+import ErrorPage from 'next/error'
 
 export default function Exterior({ imgList }) {
+
+  const router = useRouter()
+  if (!router.isFallback && !imgList ) {
+      return <ErrorPage statusCode={404} />
+  }
+
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 

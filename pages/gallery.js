@@ -59,7 +59,7 @@ export default function Gallery() {
 
   const router = useRouter();
 
-  const [tab, setTab] = useState("tab1");
+  // const [tab, setTab] = useState("tab1");
 
   function onTabClick(tab) {
     setTab(tab);

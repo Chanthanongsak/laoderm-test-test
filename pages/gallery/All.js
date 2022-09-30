@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
 import Image from "next/image";
+import { useRouter } from 'next/router'
+import ErrorPage from 'next/error'
 
 export default function All({
   videoList,
@@ -13,6 +15,12 @@ export default function All({
   cigarList,
   lobbyList,
 }) {
+
+  const router = useRouter()
+  if (!router.isFallback && !videoList && !exteriorList && !interiorList&& !poolList&& !saunaList&& !spaList&& !restuarantList&& !cigarList&& !lobbyList ) {
+      return <ErrorPage statusCode={404} />
+  }
+
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
@@ -37,6 +45,8 @@ export default function All({
     ...cigarList,
     ...lobbyList,
   ];
+
+
 
   return (
     <>
