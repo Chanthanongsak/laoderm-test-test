@@ -112,14 +112,13 @@ export default function Service() {
             infiniteLoop={true}
             showArrows={false}
             showStatus={false}
+            showThumbs={false}
           >
-            {mainSlide.map((s) => {
+            {mainSlide.map((s, index) => {
               return (
-                <>
-                  <div className={styles.bgImg}>
-                    <Image alt="/" src={s} width="1000" height="1000" />
-                  </div>
-                </>
+                <div className={styles.bgImg} key={index}>
+                  <Image alt="/" src={s} width="1000" height="1000" />
+                </div>
               );
             })}
           </Carousel>
@@ -215,47 +214,46 @@ export default function Service() {
 
       <div data-aos="fade-up" data-aos-duration="1000">
         <div className={[styles.flex_service]}>
-          {hoverImg.map((h) => {
+          {hoverImg.map((h, index) => {
             return (
-              <>
+              <div
+                className={[styles.imgScale, styles.posrelative].join(" ")}
+                key={index}
+              >
                 <div
-                  className={[styles.imgScale, styles.posrelative].join(" ")}
+                  className={[
+                    styles.inheritImg,
+                    styles.heightImgHoverOverlay,
+                    styles.posrelative,
+                    styles.z100,
+                  ].join(" ")}
                 >
-                  <div
-                    className={[
-                      styles.inheritImg,
-                      styles.heightImgHoverOverlay,
-                      styles.posrelative,
-                      styles.z100,
-                    ].join(" ")}
-                  >
-                    <Image alt="/" src={h.img} width="1000" height="730" />
-                    <div className={styles.fontInPic}>
-                      <h3>{h.h1}</h3>
-                    </div>
-                  </div>
-                  <div
-                    className={[
-                      styles.pdInSlidePic,
-                      styles.posrelative,
-                      styles.wd100,
-                    ].join(" ")}
-                  >
-                    <h1>{h.h1}</h1>
-                    <p
-                      dangerouslySetInnerHTML={{ __html: h.p }}
-                      className={[styles.mg].join(" ")}
-                    ></p>
-                  </div>
-                  <div className={[styles.btnUnderSlidePic].join(" ")}>
-                    <Link href={`${h.href}`}>
-                      <button className={styles.btn_absolute}>
-                        EXPLORE MORE
-                      </button>
-                    </Link>
+                  <Image alt="/" src={h.img} width="1000" height="730" />
+                  <div className={styles.fontInPic}>
+                    <h3>{h.h1}</h3>
                   </div>
                 </div>
-              </>
+                <div
+                  className={[
+                    styles.pdInSlidePic,
+                    styles.posrelative,
+                    styles.wd100,
+                  ].join(" ")}
+                >
+                  <h1>{h.h1}</h1>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: h.p }}
+                    className={[styles.mg].join(" ")}
+                  ></p>
+                </div>
+                <div className={[styles.btnUnderSlidePic].join(" ")}>
+                  <Link href={`${h.href}`}>
+                    <button className={styles.btn_absolute}>
+                      EXPLORE MORE
+                    </button>
+                  </Link>
+                </div>
+              </div>
             );
           })}
         </div>

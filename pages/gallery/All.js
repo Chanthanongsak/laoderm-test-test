@@ -2,7 +2,17 @@ import React, { useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
 import Image from "next/image";
 
-export default function Video({ imgList }) {
+export default function All({
+  videoList,
+  exteriorList,
+  interiorList,
+  poolList,
+  saunaList,
+  spaList,
+  restuarantList,
+  cigarList,
+  lobbyList,
+}) {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
@@ -16,10 +26,22 @@ export default function Video({ imgList }) {
     setIsViewerOpen(false);
   };
 
+  const AllImageList = [
+    ...videoList,
+    ...exteriorList,
+    ...interiorList,
+    ...poolList,
+    ...saunaList,
+    ...spaList,
+    ...restuarantList,
+    ...cigarList,
+    ...lobbyList,
+  ];
+
   return (
     <>
-      <div id="video" className="content-img">
-        {imgList.map((image, index) => {
+      <div className="content-img">
+        {AllImageList.map((image, index) => {
           return (
             <div key={index} style={{ position: "relative" }}>
               <a href="#">
@@ -32,16 +54,13 @@ export default function Video({ imgList }) {
                   height="672"
                 />
               </a>
-              <div className="ab-video">
-                <Image alt="/" src="/vdo-icon.png" width="1000" height="1000" />
-              </div>
             </div>
           );
         })}
 
         {isViewerOpen && (
           <ImageViewer
-            src={imgList}
+            src={AllImageList}
             currentIndex={currentImage}
             onClose={closeImageViewer}
             disableScroll={false}

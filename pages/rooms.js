@@ -118,14 +118,13 @@ export default function Rooms() {
             infiniteLoop={true}
             showArrows={false}
             showStatus={false}
+            showThumbs={false}
           >
-            {mainSlide.map((s) => {
+            {mainSlide.map((s, index) => {
               return (
-                <>
-                  <div className={styles.bgImg}>
-                    <Image alt="/" src={s} width="1000" height="1000" />
-                  </div>
-                </>
+                <div className={styles.bgImg} key={index}>
+                  <Image alt="/" src={s} width="1000" height="1000" />
+                </div>
               );
             })}
           </Carousel>

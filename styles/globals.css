@@ -150,7 +150,7 @@ img {
   text-align: center;
 }
 
-.content-row a:hover {
+.content-row a:hover, .content-row-fac a:hover {
   text-decoration: underline;
 }
 /* .content-row .All {
@@ -1863,6 +1863,17 @@ input[type="checkbox"]:checked::after {
 }
 
 
-/* Test */
+.styles-module_navigation__1pqAE{
+  height: unset !important
+}
 
+
+.sp-line{
+  border-right: 2px solid ;
+  padding-right: 30px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  margin-top: -3px;
+}
 

@@ -13,6 +13,11 @@ import ig from "../images/ig-logo.png";
 import { useRouter } from "next/router";
 
 function Header() {
+  useEffect(() => {
+    document.querySelector(".Comps_borderRightNav__EZD10 span").style
+      .background;
+  }, []);
+
   const [title, setTitle] = useState("title1");
   const router = useRouter();
   const currentRoute = router.pathname;
@@ -348,18 +353,20 @@ function Header() {
               </div>
 
               <div className={styles.borderRightNav}>
-                <Link href="/services">
-                  <a
-                    onClick={() => onTitleClick("title3")}
-                    className={
-                      currentRoute === "/services"
-                        ? "Service active-nav"
-                        : "Service "
-                    }
-                  >
-                    SERVICES
-                  </a>
-                </Link>
+                <div>
+                  <Link href="/services">
+                    <a
+                      onClick={() => onTitleClick("title3")}
+                      className={
+                        currentRoute === "/services"
+                          ? "Service active-nav"
+                          : "Service "
+                      }
+                    >
+                      SERVICES
+                    </a>
+                  </Link>
+                </div>
                 <span></span>
               </div>
 

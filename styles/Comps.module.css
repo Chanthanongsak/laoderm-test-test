@@ -38,6 +38,10 @@
   margin-left: 20px;
 }
 
+.menu div:nth-last-child(1){
+  margin-top: -3px;
+}
+
 .menu a:hover{
   color: rgb(203, 182, 126);
 }
@@ -302,3 +306,4 @@
   background: white;
   right: 20px;
 }
+

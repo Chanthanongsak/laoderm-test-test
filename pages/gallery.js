@@ -12,6 +12,7 @@ import Lobby from "./gallery/lobby";
 import styles from "../styles/Home.module.css";
 // import scrollBlack from "./menu_navbar/scrollBlack";
 import { useRouter } from "next/router";
+import All from "./gallery/All";
 
 export default function Gallery() {
   const [tab, setTab] = useState("tab1");
@@ -57,11 +58,8 @@ export default function Gallery() {
   }, []);
 
   const router = useRouter();
-  console.log(router.query);
 
   // const [tab, setTab] = useState("tab1");
-
-  console.log(tab);
 
   function onTabClick(tab) {
     setTab(tab);
@@ -113,7 +111,7 @@ export default function Gallery() {
     <>
       <section className="section-facilities contentrow-facilities">
         <div className={styles.row_line_gallery}></div>
-        <div className="facTitle">
+        <div className="facTitle ">
           <a
             onClick={() => onTabClick("tab1")}
             className={tab == "tab1" ? "All abc" : "All"}
@@ -182,48 +180,107 @@ export default function Gallery() {
   let titleGallery = "";
   let contentFacilities = "";
 
+  const videoSrcAll = [
+    "/pic1.jpg",
+    "/pic1.jpg",
+    "/pic1.jpg",
+    "/pic1.jpg",
+    "/pic1.jpg",
+    "/pic1.jpg",
+    "/pic1.jpg",
+  ];
+
+  const exteriorSrc = ["/main.jpg", "/main.jpg", "/main.jpg", "/main.jpg"];
+
+  const interiorSrc = [
+    "/bg-main.jpg",
+    "/bg-main.jpg",
+    "/bg-main.jpg",
+    "/bg-main.jpg",
+    "/bg-main.jpg",
+  ];
+
+  const poolImage = [
+    "/pool.jpg",
+    "/pool.jpg",
+    "/pool.jpg",
+    "/pool.jpg",
+    "/pool.jpg",
+    "/pool.jpg",
+  ];
+
+  const saunaImage = ["/sauna.jpg", "/sauna.jpg", "/sauna.jpg", "/sauna.jpg"];
+
+  const spaImage = [
+    "/spa.jpg",
+    "/spa.jpg",
+    "/spa.jpg",
+    "/spa.jpg",
+    "/spa.jpg",
+    "/spa.jpg",
+    "/spa.jpg",
+    "/spa.jpg",
+  ];
+
+  const restuarantImage = [
+    "/Souphattra Restaurant.jpg",
+    "/Souphattra Restaurant.jpg",
+    "/Souphattra Restaurant.jpg",
+    "/Souphattra Restaurant.jpg",
+    "/Souphattra Restaurant.jpg",
+    "/Souphattra Restaurant.jpg",
+    "/Souphattra Restaurant.jpg",
+    "/Souphattra Restaurant.jpg",
+  ];
+
+  const cigarImage = ["/cigar bar.jpg", "/cigar bar.jpg"];
+
+  const lobbyImage = ["/lobby bar.jpg"];
+
   if (tab === "tab1") {
     titleGallery = title;
     content = (
       <>
-        <Video />
-        <Exterior />
-        <Interior />
-        <PoolAndGym />
-        <Sauna />
-        <Spa />
-        <Restaurant />
-        <Cigar />
-        <Lobby />
+        <All
+          videoList={videoSrcAll}
+          exteriorList={exteriorSrc}
+          interiorList={interiorSrc}
+          poolList={poolImage}
+          saunaList={saunaImage}
+          spaList={spaImage}
+          restuarantList={restuarantImage}
+          cigarList={cigarImage}
+          lobbyList={lobbyImage}
+        />
       </>
     );
   } else if (tab === "tab2") {
     titleGallery = title;
-    content = <Video />;
+    content = <Video imgList={videoSrcAll} />;
   } else if (tab === "tab3") {
     titleGallery = title;
-    content = <Exterior />;
+    content = <Exterior imgList={exteriorSrc} />;
   } else if (tab === "tab4") {
     titleGallery = title;
-    content = <Interior />;
+    content = <Interior imgList={interiorSrc} />;
   } else if (tab === "tab5") {
     titleGallery = titleFacilities;
-    contentFacilities = <PoolAndGym />;
+    contentFacilities = <PoolAndGym imgList={poolImage} />;
   } else if (tab === "tab5_2") {
     titleGallery = titleFacilities;
-    contentFacilities = <Sauna />;
+    contentFacilities = <Sauna imgList={saunaImage} />;
   } else if (tab === "tab5_3") {
     titleGallery = titleFacilities;
-    contentFacilities = <Spa />;
+    contentFacilities = <Spa imgList={spaImage} />;
   } else if (tab === "tab5_4") {
     titleGallery = titleFacilities;
-    contentFacilities = <Restaurant />;
+    contentFacilities = <Restaurant imgList={restuarantImage} />;
   } else if (tab === "tab5_5") {
     titleGallery = titleFacilities;
-    contentFacilities = <Cigar />;
+    contentFacilities = <Cigar imgList={cigarImage} />;
   } else if (tab === "tab5_6") {
     titleGallery = titleFacilities;
-    contentFacilities = <Lobby />;
+    contentFacilities = <Lobby imgList={lobbyImage} />;
   }
 
   return (
