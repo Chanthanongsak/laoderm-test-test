@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 // import scrollBlack from "../menu_navbar/scrollBlack";
 import Link from "next/link";
@@ -45,8 +45,90 @@ export default function ThreeBedRooms() {
     }
   }, []);
 
+  const [book, setBook] = useState("book");
+
+  function onBookClick(book) {
+    setBook(book);
+  }
+
+  if (book === "book1") {
+    document.querySelector(".content-book-room").style.display = "block";
+    document.getElementsByTagName("body")[0].style.overflow = "hidden";
+  }
+
+  if (book === "close-book") {
+    document.querySelector(".content-book-room").style.display = "none";
+    document.getElementsByTagName("body")[0].style.overflow = "visible";
+  }
+
+
   return (
     <div className="content">
+
+    <div className="content-book-room">
+        <div className="container-content-enquires">
+          <a
+            // href="#"
+            onClick={() => onBookClick("close-book")}
+            className="btn-close "
+          >
+            <Image src="/close.png" alt="" height="100" width="100" />
+          </a>
+
+          <div className="checkbox">
+            <p>I would like to view: <span className="fbold"> Three Bedroom Suite </span></p>
+            <div className="date">
+              <div className="Text_Input-date">
+                <div className="col-date">
+                  <p>Date of visit</p>
+                  <input placeholder="Day / Month / Year " type="text" />
+                </div>
+                <div className="col-date">
+                  <p>My price range is</p>
+                  <input placeholder="less 1,800 $" type="text" />
+                </div>
+              </div>
+              <div className="Text_Input-">
+                <input
+                  placeholder="Please specify your enquiry hear"
+                  type="text"
+                />
+              </div>
+              <div className="Text-bottom">
+                <p>
+                  Please verify that your email address and phone number are
+                  accurate. We will contact you shortly.
+                </p>
+                <p>
+                  Please note that showcase units are only accessible by
+                  appointment
+                </p>
+              </div>
+            </div>
+            <div className="btn-submit">
+              <button>SUBMIT</button>
+            </div>
+            <div className="contact">
+              <p>You can also contact our Sales directly:</p>
+              <div className="contact-Email">
+                <Image alt="" src="/Asset 1.png" width="30" height="20" />
+                <p>Dosmlaos@souphattra.com</p>
+              </div>
+              <div className="contact-tel">
+                <Image
+                  alt=""
+                  src="/Asset 2.png"
+                  // style={{ width: 20 }}
+                  width="20"
+                  height="20"
+                />
+                <p> 856 20 2222 7735</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="container-content">
         <div className="pp max-1280">
           <p>
@@ -135,7 +217,7 @@ export default function ThreeBedRooms() {
                     </div>
                   </div>
                   <div className="btn-book">
-                    <a href="#">BOOK NOW</a>
+                    <a onClick={() => onBookClick("book1")} href="#">BOOK NOW</a>
                   </div>
                 </div>
               </div>

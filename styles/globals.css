@@ -854,7 +854,7 @@ input {
 
 .checkbox p {
   font-size: 1.5625vw;
-  /* font-family: "Montserrat-Regular"; */
+  font-family: "Montserrat-Regular";
   color: black;
   font-weight: 500;
   /* margin-bottom: 20px; */
@@ -1185,6 +1185,7 @@ input[type="checkbox"]:checked::after {
   top: 0;
   z-index: 100;
   padding: 30px 0;
+  display: none
 }
 
 .content-book{
@@ -1195,8 +1196,20 @@ input[type="checkbox"]:checked::after {
   top: 0;
   z-index: 100;
   padding: 30px 0;
-
+  display: none
 }
+
+.content-book-room{
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 100;
+  padding: 30px 0;
+  display: none
+}
+
 
 .dis-block{
   display: block !important;
@@ -1332,14 +1345,17 @@ input[type="checkbox"]:checked::after {
   /* justify-content: space-between; */
 }
 .text-deatil-room p {
-  font-size: 1.953125vw;
-  font-family: "CormorantGaramond-SemiBold";
+  /* font-size: 1.953125vw; */
+  font-size: 20px;
+  /* font-family: "CormorantGaramond-SemiBold"; */
   color: #42413f;
   margin-left: 40px;
+  font-weight: bold;
 }
 .text-deatil-room p:nth-child(2) {
   font-family: "Cormorant-MediumItalic";
   font-size: 1.4322916666666667vw;
+  font-weight: lighter
 }
 .col-room-book {
   display: flex;
@@ -1640,9 +1656,16 @@ input[type="checkbox"]:checked::after {
   padding: 0 5vw;
 }
 
+.text-deatil-room p:nth-child(2) {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+
 @media screen and (min-width: 1280px) {
   .text-deatil-room p:nth-child(2) {
-    font-size: 22px;
+    /* font-size: 22px; */
   }
   .container-row {
     padding: 0 64px;
@@ -1690,7 +1713,7 @@ input[type="checkbox"]:checked::after {
     font-size: 13px;
   }
   .text-deatil-room p {
-    font-size: 25px;
+    font-size: 20px;
   }
   .deatail-room {
     padding: 25px;
@@ -1877,3 +1900,6 @@ input[type="checkbox"]:checked::after {
   margin-top: -3px;
 }
 
+.fbold{
+  font-weight: bold
+}
