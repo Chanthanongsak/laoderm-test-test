@@ -28,8 +28,9 @@ export default function Exterior({ imgList }) {
     <div className="content-img" id="exterior">
       {imgList.map((ex, index) => {
         return (
-          <a href="#" key={index}>
+   
             <Image
+            key={index}
               className="img-fluid"
               alt="/"
               onClick={() => openImageViewer(index)}
@@ -37,7 +38,7 @@ export default function Exterior({ imgList }) {
               width="1000"
               height="672"
             />
-          </a>
+    
         );
       })}
 

@@ -30,7 +30,7 @@ export default function Video({ imgList }) {
         {imgList.map((image, index) => {
           return (
             <div key={index} style={{ position: "relative" }}>
-              <a href="#">
+           
                 <Image
                   className="img-fluid"
                   alt="/"
@@ -39,7 +39,7 @@ export default function Video({ imgList }) {
                   width="1000"
                   height="672"
                 />
-              </a>
+            
               <div className="ab-video">
                 <Image alt="/" src="/vdo-icon.png" width="1000" height="1000" />
               </div>

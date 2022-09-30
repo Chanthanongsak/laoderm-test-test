@@ -54,7 +54,7 @@ export default function All({
         {AllImageList.map((image, index) => {
           return (
             <div key={index} style={{ position: "relative" }}>
-              <a href="#">
+              
                 <Image
                   className="img-fluid"
                   alt="/"
@@ -63,7 +63,7 @@ export default function All({
                   width="1000"
                   height="672"
                 />
-              </a>
+              
             </div>
           );
         })}
