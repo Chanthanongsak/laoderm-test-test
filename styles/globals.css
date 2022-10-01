@@ -1903,3 +1903,20 @@ input[type="checkbox"]:checked::after {
 .fbold{
   font-weight: bold
 }
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 400px;
+  height: 200px;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 400px;
+  height: 200px;
+}
+.gmap_iframe {
+  width: 600px !important;
+  height: 400px !important;
+}

@@ -171,7 +171,21 @@ function Footer() {
         <div>
           <div className={styles.flex}>
             <div className={styles.map}>
-              <div className={styles.squre}></div>
+              {/* <div className={styles.squre}></div> */}
+              <div className="mapouter">
+                <div className="gmap_canvas">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.555107149214!2d102.60839741480544!3d17.999423987714597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x312469a25d658c27%3A0x3c994a0dca84a034!2sNongtha%20Central%20Park!5e0!3m2!1sen!2sus!4v1664597031331!5m2!1sen!2sus"
+                    width={600}
+                    height={450}
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                  <a href="https://mcpenation.com/">Minecraft Website</a>
+                </div>
+              </div>
               <Image alt="map" src={map} width={60} height={50} />
             </div>
             <div className={styles.address}>
