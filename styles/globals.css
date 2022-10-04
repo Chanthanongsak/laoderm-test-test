@@ -168,6 +168,10 @@ img {
   grid-gap: 1.6276041666666667vw;
 }
 
+.container-image img{
+  cursor: pointer;
+}
+
 .img-fluid {
   width: 100%;
   height: 100%;
@@ -259,6 +263,10 @@ img {
     grid-template-columns: repeat(6, 1fr);
     /* grid-gap: 1.6276041666666667vw; */
     grid-gap: 25px
+}
+
+.container-image-facilities img{
+  cursor: pointer;
 }
 
 .max-facilities{
@@ -520,6 +528,7 @@ input {
   /* font-family: "Montserrat-Regular"; */
   font-size: 14px;
   color: #818181;
+  cursor: default;
 }
 
 .Text-Message {
@@ -712,6 +721,7 @@ input {
   /* padding-left: 5px; */
   border: none;
   border-bottom: 1px solid #000;
+  cursor: text;
 }
 
 .select-box select:focus {
@@ -881,9 +891,13 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: center;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+
 input[type="checkbox"]::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f00c";
+  font-family: 'Abyssinica SIL', serif;
+
+  content: "✓";
   font-weight: 900;
   font-size: 20px;
   color: white;
@@ -1283,8 +1297,12 @@ input[type="checkbox"]:checked::after {
   /* width: 2.78vw !important; */
   width: 43px !important;
   height: 2.7994791666666665vw;
-  padding-left: 15px !important;
+  /* padding-left: 15px !important; */
   cursor: pointer;
+}
+
+.icon-right-left div {
+  margin-left: 15px !important
 }
 
 .container-book {
@@ -1378,11 +1396,13 @@ input[type="checkbox"]:checked::after {
 }
 .room-icon p {
   margin-left: 15px;
-  font-size: 1.015625vw;
+  /* font-size: 1.015625vw; */
+  font-size: 14px;
   /* font-family: "Montserrat-Regular"; */
 }
 .room-icon img {
-  width: 1.40625vw !important;
+  /* width: 1.40625vw !important; */
+  width: 25px !important;
   height: 1.40625vw;
 }
 .btn-book {
@@ -1393,8 +1413,9 @@ input[type="checkbox"]:checked::after {
 }
 .btn-book a {
   width: 100%;
-  height: 2.2135416666666665vw;
-  font-size: 1.25vw;
+  height: 40px;
+  /* font-size: 1.25vw; */
+  font-size: 17px;
   /* font-family: "Montserrat-Regular"; */
   border-radius: 0;
   border: none;
@@ -1622,30 +1643,42 @@ input[type="checkbox"]:checked::after {
 
 .view-detail p {
   color: white;
-  font-size: 1.6276041666666667vw;
+  /* font-size: 1.6276041666666667vw; */
+  font-size: 25px;
   padding-bottom: 0.9765625vw;
   font-family: "CormorantGaramond-SemiBoldItalic";
 }
 
 .view-detail p:nth-child(2) {
   color: white;
-  font-size: 1.171875vw;
+  /* font-size: 1.171875vw; */
+  font-size: 18px;
   /* font-family: "Montserrat-Regular"; */
 }
 .view-detail button {
-  height: 2.6041666666666665vw;
+  /* height: 2.6041666666666665vw;
   width: 14.322916666666666vw;
-  font-size: 0.9765625vw;
+  font-size: 0.9765625vw; */
+  height: 50px;
+  width: 220px;
+  font-size: 18px;
   background-color: transparent;
-  border: 0.1953125vw solid #ffff;
+  /* border: 0.1953125vw solid #ffff; */
+  border: 1px solid #ffff;
   color: #ffff;
   cursor: pointer;
   font-family: "Garet-Book";
   margin-top: 10px;
+  transition: all 0.2s ease-in-out;
 }
-.view-detail button a {
-  color: white;
+
+.view-detail button:hover  {
+  background-color: #C1AE7A;
+  border-color: #C1AE7A;
+  color: #42413F;
 }
+
+
 .col-room-more {
   margin-top: 30px;
 }
@@ -1663,7 +1696,7 @@ input[type="checkbox"]:checked::after {
 }
 
 
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .text-deatil-room p:nth-child(2) {
     /* font-size: 22px; */
   }
@@ -1688,10 +1721,10 @@ input[type="checkbox"]:checked::after {
     padding: 0 64px;
   }
   .view-detail button {
-    height: 40px;
+    height: 50px;
     width: 220px;
-    font-size: 15px;
-    border: 3px solid #ffff;
+    font-size: 18px;
+    border: 1px solid #ffff;
   }
   .view-detail p:nth-child(2) {
     font-size: 18px;
@@ -1881,8 +1914,9 @@ input[type="checkbox"]:checked::after {
   color: rgb(203, 182, 126);
 }
 
-.eqOverZero a:hover{
-  color: black;
+.eqOverZero:hover{
+  color: rgb(66, 65, 63);
+  cursor: pointer;
 }
 
 
@@ -1909,6 +1943,7 @@ input[type="checkbox"]:checked::after {
   text-align: right;
   width: 400px;
   height: 200px;
+  margin-bottom: 20px;
 }
 .gmap_canvas {
   overflow: hidden;

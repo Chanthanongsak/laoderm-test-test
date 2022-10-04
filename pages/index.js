@@ -203,11 +203,11 @@ export default function Home() {
 
         <div className={styles.create_space}></div>
 
-        <div className={[styles.textCenter, styles.mg50].join(" ")}>
+        <div className={[styles.mg50].join(" ")}>
           <h1
             data-aos="fade-down"
             data-aos-duration="1000"
-            className={styles.fontGold}
+            className={[styles.fontGold, styles.textCenter].join(" ")}
           >
             Discover The Apartments
           </h1>

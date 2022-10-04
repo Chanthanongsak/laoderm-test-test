@@ -43,12 +43,12 @@ function Header() {
   );
 
   const scrollBlack = () => {
-    document.querySelector(".Comps_fix__8yk6q").style.color = "black";
+    document.querySelector(".Comps_fix__8yk6q").style.color = "#42413F";
     document.querySelector(".Comps_fix__8yk6q").style.backgroundColor = "white";
     document.querySelector(".Comps_enquires__n7_FT").style.backgroundColor =
       "#CBB67E";
     document.querySelector(".Comps_logoNav__YiO1I").style.backgroundColor =
-      "black";
+      "#42413F";
     document.querySelector(".Comps_nav_end__mBM5e").style.color = "white";
 
     document.querySelector('img[alt="Lao Derm logo"]').src =
@@ -428,9 +428,11 @@ function Header() {
                 <Image alt="" src={facebook} />
               </div>
             </div>
-            <div className={styles.enquires}>
+            <div
+              onClick={() => onTitleClick("title7")}
+              className={styles.enquires}
+            >
               <a
-                onClick={() => onTitleClick("title7")}
                 className={
                   title === "/title7" ? "Enquires active-nav" : "Enquires "
                 }

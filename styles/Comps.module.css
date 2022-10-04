@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 500;
 }
 
 .any_flex{
@@ -168,9 +169,13 @@
   color: #5B4A1C;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-
+.btnContact:hover{
+  background: rgb(66, 65, 63);
+  color: white;
+}
 
 .line_brown{
   margin: 0;

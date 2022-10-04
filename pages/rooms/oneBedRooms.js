@@ -6,13 +6,13 @@ import Link from "next/link";
 export default function OneBedRooms() {
   useEffect(() => {
     const scrollBlack = () => {
-      document.querySelector(".Comps_fix__8yk6q").style.color = "black";
+      document.querySelector(".Comps_fix__8yk6q").style.color = "#42413F";
       document.querySelector(".Comps_fix__8yk6q").style.backgroundColor =
         "white";
       document.querySelector(".Comps_enquires__n7_FT").style.backgroundColor =
         "#CBB67E";
       document.querySelector(".Comps_logoNav__YiO1I").style.backgroundColor =
-        "black";
+        "rgb(66, 65, 63)";
       document.querySelector(".Comps_nav_end__mBM5e").style.color = "white";
 
       document.querySelector('img[alt="Lao Derm logo"]').src =
@@ -43,8 +43,6 @@ export default function OneBedRooms() {
     if (window.location.pathname === "/rooms/oneBedRooms") {
       document.querySelector(".Room").style.color = "rgb(203, 182, 126)";
     }
-    
-    
   }, []);
 
   const [book, setBook] = useState("book");
@@ -63,10 +61,8 @@ export default function OneBedRooms() {
     document.getElementsByTagName("body")[0].style.overflow = "visible";
   }
 
-
   return (
     <div className="content">
-
       <div className="content-book-room">
         <div className="container-content-enquires">
           <a
@@ -78,7 +74,10 @@ export default function OneBedRooms() {
           </a>
 
           <div className="checkbox">
-            <p>I would like to view: <span className="fbold"> One Bedroom Suite </span></p>
+            <p>
+              I would like to view:{" "}
+              <span className="fbold"> One Bedroom Suite </span>
+            </p>
             <div className="date">
               <div className="Text_Input-date">
                 <div className="col-date">
@@ -130,7 +129,6 @@ export default function OneBedRooms() {
           </div>
         </div>
       </div>
-
 
       <div className="container-content">
         <div className="pp max-1280">
@@ -220,24 +218,30 @@ export default function OneBedRooms() {
                     </div>
                   </div>
                   <div className="btn-book">
-                    <a onClick={() => onBookClick("book1")} href="#">BOOK NOW</a>
+                    <a onClick={() => onBookClick("book1")} href="#">
+                      BOOK NOW
+                    </a>
                   </div>
                 </div>
               </div>
               <div className="div2">
                 <div className="icon-right-left">
-                  <Image
-                    width="1000"
-                    height="1000"
-                    src="/left-arrow-angle-black-circular-interface-symbol_icon-icons.com_72951.png"
-                    alt="/"
-                  />
-                  <Image
-                    width="1000"
-                    height="1000"
-                    src="/right-arrow-angle-black-circular-interface-symbol_icon-icons.com_72951.png"
-                    alt="/"
-                  />
+                  <div>
+                    <Image
+                      width="1000"
+                      height="1000"
+                      src="/left-arrow-angle-black-circular-interface-symbol_icon-icons.com_72951.png"
+                      alt="/"
+                    />
+                  </div>
+                  <div>
+                    <Image
+                      width="1000"
+                      height="1000"
+                      src="/right-arrow-angle-black-circular-interface-symbol_icon-icons.com_72951.png"
+                      alt="/"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -291,9 +295,7 @@ export default function OneBedRooms() {
                     <p>Two Bedroom Suite</p>
                     <p>SIZE: 114 sqm</p>
                     <Link href="/rooms/twoBedRooms">
-                      <button>
-                        <a>VIEW DETAILS</a>
-                      </button>
+                      <button>VIEW DETAILS</button>
                     </Link>
                   </div>
                 </div>
@@ -305,9 +307,7 @@ export default function OneBedRooms() {
                     <p>Three Bedroom Suite</p>
                     <p>SIZE: 147 sqm</p>
                     <Link href="/rooms/threeBedRooms">
-                      <button>
-                        <a>VIEW DETAILS</a>
-                      </button>
+                      <button>VIEW DETAILS</button>
                     </Link>
                   </div>
                 </div>

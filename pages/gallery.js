@@ -19,13 +19,13 @@ export default function Gallery() {
 
   useEffect(() => {
     const scrollBlack = () => {
-      document.querySelector(".Comps_fix__8yk6q").style.color = "black";
+      document.querySelector(".Comps_fix__8yk6q").style.color = "#42413F";
       document.querySelector(".Comps_fix__8yk6q").style.backgroundColor =
         "white";
       document.querySelector(".Comps_enquires__n7_FT").style.backgroundColor =
         "#CBB67E";
       document.querySelector(".Comps_logoNav__YiO1I").style.backgroundColor =
-        "black";
+        "rgb(66, 65, 63)";
       document.querySelector(".Comps_nav_end__mBM5e").style.color = "white";
 
       document.querySelector('img[alt="Lao Derm logo"]').src =
