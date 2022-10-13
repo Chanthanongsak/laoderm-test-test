@@ -86,7 +86,16 @@ export default function Home() {
             {homeSlide.map((s, index) => {
               return (
                 <div className={styles.bgImg} key={index}>
-                  <Image alt="/" src={s} width="1000" height="1000" />
+                  <Image
+                    alt="/"
+                    src={s}
+                    width="1000"
+                    height="1000"
+                    //       layout="fill"
+                    //       sizes="(max-width: 768px) 100vw,
+                    // (max-width: 1200px) 50vw,
+                    // 33vw"
+                  />
                 </div>
               );
             })}

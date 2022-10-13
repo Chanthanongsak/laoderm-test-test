@@ -47,7 +47,7 @@ a {
 
 .main-cover{
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .d-none {
@@ -194,6 +194,10 @@ img {
     font-size: 50px;
     margin: 90px 0 20px;
   }
+}
+
+.spanUnset span{
+  position: unset !important;
 }
 
 @media only screen and (max-width: 575.89px) {
@@ -1032,6 +1036,10 @@ input[type="checkbox"]:checked::after {
 
 .col-text {
   cursor: pointer;
+}
+
+.control-dots{
+  opacity: 0
 }
 
 @media only screen and (min-width: 1280px) {
@@ -1954,4 +1962,45 @@ input[type="checkbox"]:checked::after {
 .gmap_iframe {
   width: 600px !important;
   height: 400px !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .content-row-fac{
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main-cover{
+    height: unset
+  }
+
+  .wave{
+    height: 13vh;
+    z-index: 1;
+  }
+
+  .mapouter,.gmap_canvas{
+    height: 150px;
+  }
+
+  .contentrow-1280px,   .img-col,.contentrow-facilities{
+    padding: 0 10px;
+  }
+
+  .container-image,.container-image-facilities{
+    grid-gap: 10px;
+  }
+
+  .content-row a{
+    font-size: 13px;
+  }
+
+  .content-row-fac{
+    margin-top: 30px;
+  }
+
+  .container-content-careers,.container-content-enquires{
+    max-width: 750px
+  }
 }

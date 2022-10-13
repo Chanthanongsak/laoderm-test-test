@@ -161,6 +161,10 @@
   transform: translateY(-1vh);
 }
 
+.bgImg{
+  position: relative;
+}
+
 .bgImg span{
   position: unset !important;
 }
@@ -494,6 +498,10 @@
   padding-right: 3vw;
 }
 
+.fontInLux .mg{
+  text-align: justify;
+}
+
 .leftFlexLux{
   display: flex;
     flex-direction: column;
@@ -512,5 +520,184 @@
   .heightImgHoverOverlay{
     height: 500px
   }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container{
+    width: 980px;
+  }
+
+  .containerMain{
+    padding: 0;
+  }
+
+  .adj{
+    font-size: 35px;
+  }
+
+  .fontGold{
+    font-size: 30px;
+  }
+
+  .luxury{
+    height: 600px;
+  }
+
+  .absoluteBox{
+    padding: 20px 80px 30px 30px;
+    height: 320px
+  }
+
+  .absoluteBox p{
+    margin: 30px 0 50px;
+  }
+
+  .absoluteBox .fontGold{
+    font-size: 25px;
+  }
+
+  .absolutePic{
+    height: 380px
+  }
+
+  .bg_coconut .fontGold{
+    font-size: 18px;
+  }
+
+  .leftFlexService .mg{
+    margin: 20px 0 30px;
+    font-size: 15px;
+  }
+
+  .underPicServices{
+    width: 78%;
+  }
+
+  .rightFlexService{
+    padding-left: 40px;
+  }
+
+  .rightFlexService .mgT{
+    padding-top: 40px;
+  }
+
+  .picServices{
+    height: 300px;
+  }
+
+  .leftFlexService .pd{
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .container{
+    width: 750px;
+  }
+
+  .bgImg{
+    height: 500px;
+  }
+
+  .luxury{
+    height: 500px;
+  }
+
+  .fontGold{
+    font-size: 22px;
+  }
+
+  .discoverLeft{
+    height: 450px;
+  }
+
+  .discoverRightImg{
+    height: 215px;
+  }
+
+  .hover h1{
+    font-size: 15px;
+  }
+
+  .hover p{
+    font-size: 13px;
+  }
+
+  .btn_in_hover{
+    padding: 8px 20px;
+    font-size: 10px;
+  }
+
+  .discoverRight .hover{
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .discoverRight .hover div{
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .logo_in_bg span{
+    max-width: 75px !important;
+  }
+
+  .logo_in_bg p{
+    font-size: 13px
+  }
+
+  .adj{
+    font-size: 30px;
+  }
+
+  .absolutePic{
+    width: 56%;
+    height: 350px;
+  }
+
+  .absoluteBox{
+    height: 290px;
+    padding: 20px 50px 30px 30px;
+    width: 60%
+  }
+
+  .absoluteRoomPic{
+    width: 67%;
+    height: 360px;
+  }
+
+  .absoluteRoomBox{
+    padding: 20px 30px;
+    height: 300px;
+    width: 52%;
+  }
+
+  .absoluteRoomBox p{
+    margin: 15px 0 25px;
+    font-size: 14px;
+  }
+
+  .leftFlexService .mg{
+    font-size: 13px;
+  }
+
+  .bg_coconut .fontGold{
+    font-size: 15px;
+  }
+
+  .rightFlexService{
+    padding-left: 25px;
+  }
+
+  .rightFlexService .mgT{
+    padding-top: 25px;
+  }
+
+
+  .flex_service{
+    grid-template-columns: repeat(2,1fr);
+  }
+
 }
 

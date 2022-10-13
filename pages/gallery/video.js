@@ -1,14 +1,13 @@
 import React, { useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
 import Image from "next/image";
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
+import { useRouter } from "next/router";
+import ErrorPage from "next/error";
 
 export default function Video({ imgList }) {
-
-  const router = useRouter()
-  if (!router.isFallback && !imgList ) {
-      return <ErrorPage statusCode={404} />
+  const router = useRouter();
+  if (!router.isFallback && !imgList) {
+    return <ErrorPage statusCode={404} />;
   }
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -29,17 +28,20 @@ export default function Video({ imgList }) {
       <div id="video" className="content-img">
         {imgList.map((image, index) => {
           return (
-            <div key={index} style={{ position: "relative" }}>
-           
-                <Image
-                  className="img-fluid"
-                  alt="/"
-                  src={image}
-                  onClick={() => openImageViewer(index)}
-                  width="1000"
-                  height="672"
-                />
-            
+            <div
+              key={index}
+              style={{ position: "relative" }}
+              className="spanUnset"
+            >
+              <Image
+                className="img-fluid"
+                alt="/"
+                src={image}
+                onClick={() => openImageViewer(index)}
+                width="1000"
+                height="672"
+              />
+
               <div className="ab-video">
                 <Image alt="/" src="/vdo-icon.png" width="1000" height="1000" />
               </div>

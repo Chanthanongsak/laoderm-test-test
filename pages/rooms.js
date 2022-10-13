@@ -1,6 +1,9 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import mainBG from "../images/rooms.jpg";
+import mainBG2 from "../images/roombg2.jpg";
+import mainBG3 from "../images/roombg3.jpg";
+import mainBG4 from "../images/roombg4.jpg";
 import one_rooms from "../images/one-room-suit.jpg";
 import two_rooms from "../images/two-room-suit.jpg";
 import three_rooms from "../images/three-room-suit.jpg";
@@ -107,6 +110,10 @@ export default function Rooms() {
     "/roombg2.jpg",
     "/roombg3.jpg",
     "/roombg4.jpg",
+    // mainBG,
+    // mainBG2,
+    // mainBG3,
+    // mainBG4,
   ];
 
   return (
@@ -123,7 +130,14 @@ export default function Rooms() {
             {mainSlide.map((s, index) => {
               return (
                 <div className={styles.bgImg} key={index}>
-                  <Image alt="/" src={s} width="1000" height="1000" />
+                  <Image
+                    alt="/"
+                    src={s}
+                    width="1000"
+                    height="1000"
+                    // layout="intrinsic"
+                    // sizes="1000"
+                  />
                 </div>
               );
             })}

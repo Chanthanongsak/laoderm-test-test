@@ -294,7 +294,7 @@ export default function Gallery() {
 
         <section className="img-content">
           <div className="img-col max-1280px">
-            <div className="container-image">{content}</div>
+            <div className="container-image ">{content}</div>
           </div>
         </section>
 

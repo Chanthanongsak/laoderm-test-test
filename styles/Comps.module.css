@@ -96,6 +96,7 @@
 
 .address, .map , .input{
   width: 30%;
+  overflow: hidden;
 }
 
 .input{
@@ -312,3 +313,53 @@
   right: 20px;
 }
 
+@media only screen and (max-width: 1200px){
+  .footer{
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .container{
+    padding-left: 20px;
+  }
+
+  .container_nav{
+    padding-left: 20px;
+  }
+
+  .logoNav{
+    padding: 0 10px;
+  }
+
+  .borderRightNav{
+    padding-right: 20px;
+  }
+
+  .borderRightNav span{
+    right: 10px;
+  }
+
+  .enquires{
+    padding: 0 20px;
+  }
+
+  .containerContact{
+    width: unset;
+  }
+
+  .footer_lg{
+    padding: 50px 0;
+  }
+
+  .input{
+    justify-content: center;
+  }
+
+  .input input{
+    margin-bottom: 15px;
+  }
+
+
+
+}

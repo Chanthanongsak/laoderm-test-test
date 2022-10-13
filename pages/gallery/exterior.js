@@ -1,14 +1,13 @@
 import React, { useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
 import Image from "next/image";
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
+import { useRouter } from "next/router";
+import ErrorPage from "next/error";
 
 export default function Exterior({ imgList }) {
-
-  const router = useRouter()
-  if (!router.isFallback && !imgList ) {
-      return <ErrorPage statusCode={404} />
+  const router = useRouter();
+  if (!router.isFallback && !imgList) {
+    return <ErrorPage statusCode={404} />;
   }
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -25,20 +24,23 @@ export default function Exterior({ imgList }) {
   };
 
   return (
-    <div className="content-img" id="exterior">
+    <div className="content-img " id="exterior">
       {imgList.map((ex, index) => {
         return (
-   
+          <div
+            key={index}
+            style={{ position: "relative" }}
+            className="spanUnset"
+          >
             <Image
               className="img-fluid"
               alt="/"
               onClick={() => openImageViewer(index)}
-              key={index}
               src={ex}
               width="1000"
               height="672"
             />
-       
+          </div>
         );
       })}
 
