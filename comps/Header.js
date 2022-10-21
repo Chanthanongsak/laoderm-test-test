@@ -14,8 +14,12 @@ import { useRouter } from "next/router";
 
 function Header() {
   useEffect(() => {
-    document.querySelector(".Comps_borderRightNav__EZD10 span").style
-      .background;
+    // const nodeList = document.querySelectorAll(
+    //   ".Comps_borderRightNav__EZD10 span"
+    // );
+    // for (let i = 0; i < nodeList.length; i++) {
+    //   nodeList[i].style.backgroundColor = "red";
+    // }
   }, []);
 
   const [title, setTitle] = useState("title1");
@@ -57,8 +61,12 @@ function Header() {
     document.querySelector('img[alt="Lao Derm logo"]').srcset =
       "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.94a59534.png&w=32&q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.94a59534.png&w=64&q=75 2x";
 
-    // document.querySelector(".Comps_enquires__n7_FT a:hover").style.color =
-    //   "white";
+    const nodeList = document.querySelectorAll(
+      ".Comps_borderRightNav__EZD10 .lineRightNavBar"
+    );
+    for (let i = 0; i < nodeList.length; i++) {
+      nodeList[i].style.backgroundColor = "rgb(66, 65, 63)";
+    }
 
     document
       .querySelector(".Comps_enquires__n7_FT")
@@ -67,6 +75,9 @@ function Header() {
     document
       .querySelector(".Comps_enquires__n7_FT")
       .classList.add("eqOverZero");
+
+    // document.querySelector("#borderRightRoom span").classList.add("bgB");
+    // document.querySelector("#borderRightService span").classList.add("bgB");
   };
 
   const scrollWhite = () => {
@@ -89,6 +100,13 @@ function Header() {
     document
       .querySelector(".Comps_enquires__n7_FT")
       .classList.remove("eqOverZero");
+
+    const nodeList = document.querySelectorAll(
+      ".Comps_borderRightNav__EZD10 .lineRightNavBar"
+    );
+    for (let i = 0; i < nodeList.length; i++) {
+      nodeList[i].style.backgroundColor = "white";
+    }
   };
 
   let logoNav = "";
@@ -160,6 +178,11 @@ function Header() {
   if (title === "title7") {
     document.querySelector(".content-enquires").style.display = "block";
     document.getElementsByTagName("body")[0].style.overflow = "hidden";
+  }
+
+  if (title === "title8") {
+    document.querySelector(".Comps_under_navbar_responsive__jGOIa").style.top =
+      "-100px";
   }
 
   if (title === "close-enquires") {
@@ -245,6 +268,12 @@ function Header() {
         toggled = true;
         if (curDirection === 2 && curScroll > threshold) {
           header.style.top = "-56px";
+          document.querySelector(
+            ".Comps_under_navbar_responsive__jGOIa"
+          ).style.top = "0px";
+          document.querySelector(
+            ".Comps_under_navbar_responsive__jGOIa"
+          ).style.transform = "translate(-50%,-100%)";
           header.style.color = "white";
           header.style.backgroundColor = "unset";
           black.src =
@@ -254,6 +283,12 @@ function Header() {
         } else if (curDirection === 1) {
           // console.log(document.documentElement.scrollTop);
           header.style.top = "0";
+          document.querySelector(
+            ".Comps_under_navbar_responsive__jGOIa"
+          ).style.top = "50px";
+          document.querySelector(
+            ".Comps_under_navbar_responsive__jGOIa"
+          ).style.transform = "translateX(-50%)";
           header.style.color = "black";
           header.style.backgroundColor = "white";
           black.src =
@@ -310,7 +345,12 @@ function Header() {
                     currentRoute === "/rooms" ? "Room active-nav" : "Room "
                   }
                 >
-                  <Link href="/rooms">ROOMS</Link>
+                  <Link href="/rooms">
+                    <a>
+                      ROOMS
+                      <span className="lineRightNavBar"></span>
+                    </a>
+                  </Link>
                   <div className="dropdown-content">
                     <Link href="/rooms/oneBedRooms">
                       <a
@@ -322,6 +362,7 @@ function Header() {
                         }
                       >
                         ONE BEDROOM SUITES
+                        <span className={styles.dropdownLine}></span>
                       </a>
                     </Link>
                     <Link href="/rooms/twoBedRooms">
@@ -334,6 +375,7 @@ function Header() {
                         }
                       >
                         TWO BEDROOM SUITES
+                        <span className={styles.dropdownLine}></span>
                       </a>
                     </Link>
                     <Link href="/rooms/threeBedRooms">
@@ -349,7 +391,6 @@ function Header() {
                     </Link>
                   </div>
                 </div>
-                <span></span>
               </div>
 
               <div className={styles.borderRightNav}>
@@ -364,56 +405,61 @@ function Header() {
                       }
                     >
                       SERVICES
+                      <span className="lineRightNavBar"></span>
                     </a>
                   </Link>
                 </div>
-                <span></span>
               </div>
 
               <div className={styles.borderRightNav}>
-                <Link href="/gallery">
-                  <a
-                    onClick={() => onTitleClick("title4")}
-                    className={
-                      currentRoute === "/gallery"
-                        ? "Gallery active-nav"
-                        : "Gallery "
-                    }
-                  >
-                    GALLERY
-                  </a>
-                </Link>
-                <span></span>
+                <div>
+                  <Link href="/gallery">
+                    <a
+                      onClick={() => onTitleClick("title4")}
+                      className={
+                        currentRoute === "/gallery"
+                          ? "Gallery active-nav"
+                          : "Gallery "
+                      }
+                    >
+                      GALLERY
+                      <span className="lineRightNavBar"></span>
+                    </a>
+                  </Link>
+                </div>
               </div>
 
               <div className={styles.borderRightNav}>
-                <Link href="/contact">
+                <div>
+                  <Link href="/contact">
+                    <a
+                      onClick={() => onTitleClick("title5")}
+                      className={
+                        currentRoute === "/contact"
+                          ? "Contact active-nav"
+                          : "Contact "
+                      }
+                    >
+                      CONTACT
+                      <span className="lineRightNavBar"></span>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div>
+                <Link href="/careers">
                   <a
-                    onClick={() => onTitleClick("title5")}
+                    onClick={() => onTitleClick("title6")}
                     className={
-                      currentRoute === "/contact"
-                        ? "Contact active-nav"
-                        : "Contact "
+                      currentRoute === "/careers"
+                        ? "Careers active-nav"
+                        : "Careers "
                     }
                   >
-                    CONTACT
+                    CAREERS
                   </a>
                 </Link>
-                <span></span>
               </div>
-
-              <Link href="/careers">
-                <a
-                  onClick={() => onTitleClick("title6")}
-                  className={
-                    currentRoute === "/careers"
-                      ? "Careers active-nav"
-                      : "Careers "
-                  }
-                >
-                  CAREERS
-                </a>
-              </Link>
             </div>
           </div>
           <div className={[styles.nav_end, styles.flex].join(" ")}>
@@ -440,6 +486,186 @@ function Header() {
                 ENQUIRES
               </a>
             </div>
+          </div>
+        </div>
+
+        <div className={styles.bg_menu_nav_responsive}>
+          <div className={styles.logo_nav_responsive}>
+            <div
+              onClick={() =>
+                document
+                  .querySelector(".Comps_under_navbar_responsive__jGOIa")
+                  .classList.toggle("mystyle")
+              }
+              className={styles.container_nav_responsive}
+            >
+              <div className={styles.box_nav_responsive}>
+                <div className={styles.line_in_nav_responsive}></div>
+              </div>
+            </div>
+            <div className={styles.span_between_logo}></div>
+            <div
+              className={[
+                styles.logoLD,
+                styles.pointer,
+                styles.logo_black,
+              ].join(" ")}
+              onClick={() => onTitleClick("title1_1")}
+            >
+              {logoBlackNav}
+            </div>
+          </div>
+
+          <div
+            onClick={() => onTitleClick("title7")}
+            className={styles.enquires_responsive}
+          >
+            <a
+              className={
+                title === "/title7"
+                  ? "Enquires-nav active-nav"
+                  : "Enquires-nav "
+              }
+            >
+              ENQUIRES
+            </a>
+          </div>
+        </div>
+        {/* <div
+          className={[styles.logoLD, styles.pointer, styles.logo_black].join(
+            " "
+          )}
+          onClick={() => onTitleClick("title1_1")}
+        >
+          {logoBlackNav}
+        </div> */}
+      </div>
+
+      <div className={styles.under_navbar_responsive}>
+        <div className={styles.menu}>
+          <div className={styles.borderRightNav} id="borderRightRoom">
+            <div
+              onClick={() => onTitleClick("title2")}
+              className={
+                currentRoute === "/rooms" ? "Room active-nav" : "Room "
+              }
+            >
+              <Link href="/rooms">ROOMS</Link>
+              <a
+                onClick={() => {
+                  document
+                    .querySelector(
+                      ".Comps_under_navbar_responsive__jGOIa .dropdown-content"
+                    )
+                    .classList.toggle("my-dropdown");
+                  document
+                    .querySelector(".dropdown-icon img")
+                    .classList.toggle("dropup-icon");
+                }}
+                className="dropdown-icon"
+              >
+                <img src="https://www.moresidencesbangkok.com/assets/svg/icon-arrow-dropdown.svg" />
+              </a>
+            </div>
+          </div>
+          <div className="dropdown-content">
+            <Link href="/rooms/oneBedRooms">
+              <a
+                onClick={() => onTitleClick("title2")}
+                className={
+                  currentRoute === "/rooms/oneBedRooms"
+                    ? "oneBedRooms active-nav"
+                    : "oneBedRooms "
+                }
+              >
+                ONE BEDROOM SUITES
+              </a>
+            </Link>
+            <Link href="/rooms/twoBedRooms">
+              <a
+                onClick={() => onTitleClick("title2")}
+                className={
+                  currentRoute === "/rooms/twoBedRooms"
+                    ? "twoBedRooms active-nav"
+                    : "twoBedRooms "
+                }
+              >
+                TWO BEDROOM SUITES
+              </a>
+            </Link>
+            <Link href="/rooms/threeBedRooms">
+              <a
+                className={
+                  currentRoute === "/rooms/threeBedRooms"
+                    ? "threeBedRooms active-nav"
+                    : "threeBedRooms "
+                }
+              >
+                THREE BEDROOM SUITES
+              </a>
+            </Link>
+          </div>
+
+          <div className={styles.borderRightNav} id="borderRightService">
+            <div>
+              <Link href="/services">
+                <a
+                  onClick={() => onTitleClick("title3")}
+                  className={
+                    currentRoute === "/services"
+                      ? "Service active-nav"
+                      : "Service "
+                  }
+                >
+                  SERVICES
+                </a>
+              </Link>
+            </div>
+          </div>
+
+          <div className={styles.borderRightNav}>
+            <Link href="/gallery">
+              <a
+                onClick={() => onTitleClick("title4")}
+                className={
+                  currentRoute === "/gallery"
+                    ? "Gallery active-nav"
+                    : "Gallery "
+                }
+              >
+                GALLERY
+              </a>
+            </Link>
+          </div>
+
+          <div className={styles.borderRightNav}>
+            <Link href="/contact">
+              <a
+                onClick={() => onTitleClick("title5")}
+                className={
+                  currentRoute === "/contact"
+                    ? "Contact active-nav"
+                    : "Contact "
+                }
+              >
+                CONTACT
+              </a>
+            </Link>
+          </div>
+
+          <div className={styles.borderRightNav}>
+            <Link href="/careers">
+              <a
+                onClick={() => onTitleClick("title6")}
+                className={
+                  currentRoute === "/careers"
+                    ? "Careers active-nav"
+                    : "Careers "
+                }
+              >
+                CAREERS
+              </a>
+            </Link>
           </div>
         </div>
       </div>

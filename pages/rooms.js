@@ -42,6 +42,13 @@ export default function Rooms() {
       document
         .querySelector(".Comps_enquires__n7_FT")
         .classList.remove("eqOverZero");
+
+      const nodeList = document.querySelectorAll(
+        ".Comps_borderRightNav__EZD10 .lineRightNavBar"
+      );
+      for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].style.backgroundColor = "white";
+      }
     };
     {
       scrollWhite();
@@ -114,6 +121,18 @@ export default function Rooms() {
     // mainBG2,
     // mainBG3,
     // mainBG4,
+  ];
+
+  const AmenitiesFacilities = [
+    {
+      title: "First Floor",
+      items: ["Lobby Bar", "English Garden", "Meeting Room"],
+    },
+    {
+      title: "Second Floor",
+      items: ["Souphattra Restaurant", "Cigar Bar", "Spa"],
+    },
+    { title: "Third Floor", items: ["Pool & Gym", "Steam & Sauna"] },
   ];
 
   return (
@@ -245,13 +264,14 @@ export default function Rooms() {
             styles.justifyEnd,
             styles.mg,
             styles.mg50,
+            styles.absoluteRevertRoomBox,
           ].join(" ")}
         >
           <div>
             <div
               data-aos="fade-right"
               data-aos-duration="1000"
-              className={styles.absoluteRoomBox}
+              className={[styles.absoluteRoomBox].join(" ")}
             >
               <h1 className={styles.fontGold}>Two Bedroom Suite</h1>
               <p className={styles.mg}>
@@ -268,7 +288,7 @@ export default function Rooms() {
             </div>
           </div>
           <div
-            className={[styles.inheritImg, styles.absoluteRoomPic].join(" ")}
+            className={[styles.spanUnset, styles.absoluteRoomPic].join(" ")}
             data-aos="fade-left"
             data-aos-duration="1000"
           >
@@ -289,7 +309,7 @@ export default function Rooms() {
           <div
             data-aos="fade-right"
             data-aos-duration="1000"
-            className={[styles.inheritImg, styles.absoluteRoomPic].join(" ")}
+            className={[styles.spanUnset, styles.absoluteRoomPic].join(" ")}
           >
             <Image alt="/" src={three_rooms} width="1000" height="620" />
           </div>
@@ -331,6 +351,7 @@ export default function Rooms() {
               styles.unAlige,
               styles.mg,
               styles.justifyCenter,
+              styles.amenities,
             ].join(" ")}
           >
             <div
@@ -393,6 +414,135 @@ export default function Rooms() {
               </div>
             </div>
           </div>
+
+          {AmenitiesFacilities.map((am, index) => {
+            return (
+              <div className={styles.amenitiesResponsive} key={index}>
+                <div className={[styles.bgAmenitiesResponsive]}>
+                  <div className={styles.amenitiesTitleDropdown}>
+                    <h1>{am.title}</h1>
+                    <div
+                      className={styles.circleSpace}
+                      onClick={() => {
+                        {
+                          document
+                            .querySelector("#Home_dropdownAmenities" + index)
+                            .classList.toggle("showAmenities"),
+                            document
+                              .querySelector("#Home_pmDropup" + index)
+                              .classList.toggle("d-none");
+                        }
+                      }}
+                    >
+                      <div className={styles.pmDropdown}></div>
+                      <div
+                        className={styles.pmDropup}
+                        id={`Home_pmDropup${index}`}
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    className={styles.dropdownAmenities}
+                    id={`Home_dropdownAmenities${index}`}
+                  >
+                    {am.items.map((item, index) => (
+                      <p key={index}>{item}</p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* <div className={styles.amenitiesResponsive}>
+            <div className={[styles.bgAmenitiesResponsive]}>
+              <div className={styles.amenitiesTitleDropdown}>
+                <h1>First Floor</h1>
+                <div
+                  className={styles.circleSpace}
+                  onClick={() => {
+                    {
+                      document
+                        .querySelector(".Home_dropdownAmenities__YI4_l")
+                        .classList.toggle("showAmenities"),
+                        document
+                          .querySelector(".Home_pmDropup__De5Eg")
+                          .classList.toggle("d-none");
+                    }
+                  }}
+                >
+                  <div className={styles.pmDropdown}></div>
+                  <div className={styles.pmDropup}></div>
+                </div>
+              </div>
+              <div
+                className={styles.dropdownAmenities}
+                id="Home_dropdownAmenities_firstFloor"
+              >
+                <p>Lobby Bar</p>
+                <p>English Garden</p>
+                <p>Meeting Room</p>
+              </div>
+            </div>
+
+            <div className={[styles.bgAmenitiesResponsive]}>
+              <div className={styles.amenitiesTitleDropdown}>
+                <h1>Second Floor</h1>
+                <div
+                  className={styles.circleSpace}
+                  onClick={() => {
+                    {
+                      document
+                        .querySelector(".Home_dropdownAmenities__YI4_l")
+                        .classList.toggle("showAmenities"),
+                        document
+                          .querySelector(".Home_pmDropup__De5Eg")
+                          .classList.toggle("d-none");
+                    }
+                  }}
+                >
+                  <div className={styles.pmDropdown}></div>
+                  <div className={styles.pmDropup}></div>
+                </div>
+              </div>
+              <div
+                className={styles.dropdownAmenities}
+                id="Home_dropdownAmenities_secondFloor"
+              >
+                <p>Souphattra Restaurant</p>
+                <p>Cigar Bar</p>
+                <p>Spa</p>
+              </div>
+            </div>
+            <div className={[styles.bgAmenitiesResponsive]}>
+              <div className={styles.amenitiesTitleDropdown}>
+                <h1>Third Floor</h1>
+                <div
+                  className={styles.circleSpace}
+                  onClick={() => {
+                    {
+                      document
+                        .querySelector("#Home_dropdownAmenities_thirdFloor")
+                        .classList.toggle("showAmenities"),
+                        document
+                          .querySelector(".Home_pmDropup__De5Eg")
+                          .classList.toggle("d-none");
+                    }
+                  }}
+                >
+                  <div className={styles.pmDropdown}></div>
+                  <div className={styles.pmDropup}></div>
+                </div>
+              </div>
+              <div
+                className={styles.dropdownAmenities}
+                id="Home_dropdownAmenities_thirdFloor"
+              >
+                <p>Pool & Gym</p>
+                <p>Steam & Sauna</p>
+              </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </>

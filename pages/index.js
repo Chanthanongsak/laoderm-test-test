@@ -45,6 +45,13 @@ export default function Home() {
       document
         .querySelector(".Comps_enquires__n7_FT")
         .classList.remove("eqOverZero");
+
+      const nodeList = document.querySelectorAll(
+        ".Comps_borderRightNav__EZD10 .lineRightNavBar"
+      );
+      for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].style.backgroundColor = "white";
+      }
     };
     {
       scrollWhite();
@@ -196,7 +203,7 @@ export default function Home() {
           data-aos-duration="1000"
         >
           <h1 className={styles.fontGold}>Souphattra Serviced Apartments</h1>
-          <p className={styles.mg}>
+          <p className={[styles.mg, styles.pErps].join(" ")}>
             Feature all the elegant design motifs for which the Souphattra brand
             is famous, with spacious rooms, luxurious fixtures, and fittings, as
             well as superior in-room amenities and facilities, all in one

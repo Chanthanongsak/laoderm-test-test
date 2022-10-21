@@ -25,6 +25,13 @@ export default function Careers() {
       // document.querySelector(".Comps_enquires__n7_FT a:hover").style.color =
       //   "white";
 
+      const nodeList = document.querySelectorAll(
+        ".Comps_borderRightNav__EZD10 span"
+      );
+      for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].style.backgroundColor = "rgb(66, 65, 63)";
+      }
+
       document
         .querySelector(".Comps_enquires__n7_FT")
         .classList.remove("enquiresGold");

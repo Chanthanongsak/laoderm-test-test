@@ -1,7 +1,8 @@
 .container{
   /* padding: 0 400px; */
   /* padding: 0 200px; */
-  width: 1280px;
+  /* width: 1280px; */
+  width: 1190px;
   margin: 0 auto;
 }
 
@@ -213,6 +214,7 @@
   width: 47%;
   left: 0;
   z-index: 1;
+  border: none
 }
 
 .absoluteRoomBox{
@@ -225,6 +227,7 @@
   width: 47%;
   left: 0;
   z-index: 1;
+  border: none
 }
 
 .absoluteRoomBox p{
@@ -280,6 +283,7 @@
   bottom: 15px;
   color: white;
   left: 15px;
+  z-index: 101;
 }
 
 .mini_pic{
@@ -382,9 +386,22 @@
   object-fit: cover;
 }
 
-.imgScale:hover .heightImgHoverOverlay{
+/* .imgScale:hover .heightImgHoverOverlay{
   height: 65%;
-  /* height: 200px; */
+  height: 200px;
+} */
+
+.hPicService{
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  z-index: 100;
+  position: relative;
+}
+
+.imgScale:hover .hPicService{
+  height: 65%;
+
 }
 
 .heightImgHoverOverlay{
@@ -398,6 +415,11 @@
 
 .imgScale:hover .fontInPic{
   visibility: hidden;
+  transition: all 0s
+}
+
+.imgScale .fontInPic{
+  transition: all 0.1s ease-in-out 0.5s
 }
 
 .pdInSlidePic{
@@ -462,12 +484,12 @@
 
 .discoverLeft{
   height: 500px;
-  width: 60% ;
+  width: 52% ;
   margin-right: 20px;
 }
 
 .discoverRight{
-  width: 40%;
+  width: 48%;
 }
 
 .discoverRightImg{
@@ -520,6 +542,14 @@
   .heightImgHoverOverlay{
     height: 500px
   }
+
+  .hPicService{
+    height: 100%
+  }
+
+  /* .imgScale:hover .heightImgHoverOverlay{
+    height: unset
+  } */
 }
 
 @media only screen and (max-width: 1200px) {
@@ -662,6 +692,10 @@
     width: 60%
   }
 
+  .absoluteBox p{
+    margin: 20px 0 30px;
+  }
+
   .absoluteRoomPic{
     width: 67%;
     height: 360px;
@@ -700,4 +734,365 @@
   }
 
 }
+
+@media only screen and (max-width: 768px) {
+  .container{
+    width: 590px;
+    /* width: 90vw; */
+  }
+
+  .logo_in_bg span{
+    max-width: 60px !important;
+  }
+
+  .logo_in_bg p{
+    font-size: 11px
+  }
+
+  .adj{
+    font-size: 25px;
+  }
+
+  .row_line{
+    margin: 20px auto;
+  }
+
+  .scroll{
+    font-size: 12px;
+  }
+
+  .luxury{
+    height: 410px;
+  }
+
+  .leftFlexLux .fontGold, .absoluteBox .fontGold, .absoluteRoomBox .fontGold{
+    font-size: 17px;
+  }
+
+  .fontInLux .mg{
+    margin: 20px 0;
+    font-size: 13px;
+  }
+
+  .discoverLeft{
+    height: 330px;
+  }
+
+  .discoverRightImg{
+    height: 155px;
+  }
+
+  .discoverRight .hover div{
+    margin-top: 15px;
+  }
+
+  .absolutePic{
+    height: 280px
+  }
+
+  .absoluteBox{
+    height: 220px;
+    width: 50%;
+  }
+
+  .absoluteBox p{
+    font-size: 13px;
+    margin: 10px 0 15px;
+  }
+
+  .btn_absolute{
+    font-size: 11px;
+    padding: 10px 30px;
+  }
+
+  .absoluteRoomPic{
+    height: 300px;
+  }
+
+  .absoluteRoomBox{
+    height: 240px;
+    padding: 20px;
+  }
+
+  .absoluteRoomBox p{
+    font-size: 13px;
+    margin: 10px 0 15px;
+  }
+
+  .fontInPic{
+    left: 50%;
+transform: translateX(-50%);
+width: max-content;
+  }
+
+  .leftFlexService{
+    line-height: 1.3
+  }
+
+  .leftFlexService .mg{
+    margin: 10px 0 20px;
+  }
+
+  .leftFlexService .pd{
+    padding-right: 0;
+  }
+
+  .bg_coconut .container{
+    width: 90vw;
+  }
+
+}
+
+.bgAmenitiesResponsive{
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+  .container{
+    width: 90vw;
+  }
+
+  .luxury{
+    display: block;
+    height: 100%;
+  }
+
+  .luxury .wd50{
+    width: 100%;
+  }
+
+  .leftFlexLux .fontInLux{
+    text-align: center;
+  }
+
+  .luxury .leftFlexLux{
+    margin-bottom: 30px;
+  }
+
+  .fontGold{
+    font-size: 20px !important;
+  }
+
+  .pErps{
+    font-size: 13px;
+  }
+
+  .flexend{
+    display: block;
+  }
+
+  .discoverLeft, .discoverRight{
+    width: 100%;
+  }
+
+  .discoverLeft{
+    height: 300px;
+    margin-bottom: 20px
+  }
+
+  .discoverRightImg{
+    height: 300px;
+  }
+
+  .discoverLeft .hover div{
+    margin-top: 15px;
+  }
+
+  .hover{
+    opacity: 1;
+    padding: 0;
+justify-content: center;
+align-items: center;
+text-align: center;
+  }
+
+  .discoverRightImg .hover:hover div, .discoverLeft .hover:hover div {
+    transform: unset;
+  }
+
+  .absoluteBox{
+    position: relative;
+    width: 100%;
+    height: unset;
+    top: unset;
+
+  }
+
+  .absoluteBox h1{
+    text-align: center;
+  }
+
+  .absoluteBox button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  .absolutePic{
+    height: unset;
+    width: 100%;
+  }
+
+  .leftFlex .mg,.absoluteBox p{
+    text-align: center;
+  }
+
+  .absoluteRoomPic{
+    height: unset;
+    width: 100%;
+  }
+
+  .absoluteRoomBox{
+    width: 100%;
+    height: unset;
+    position: relative;
+    top: 0;
+  }
+
+  .absoluteRevertRoomBox{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .amenities{
+    display: none;
+  }
+
+  .amenitiesTitleDropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .amenitiesTitleDropdown h1{
+    text-align: start;
+    color: #A87D07;
+  }
+
+  .amenitiesTitleDropdown .pmDropdown{
+    position: relative;
+    width: 16px;
+    height: 1.5px;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  .amenitiesTitleDropdown .pmDropup{
+    width: 1.5px;
+    height: 16px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  /* .amenitiesTitleDropdown .pmDropdown::after{
+    content: "";
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg);
+    left: 0;
+  } */
+
+  .dropdownAmenities{
+    text-align: start;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .circleSpace{
+    width: fit-content;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .dropdownAmenities p{
+    margin: 0;
+    margin-top: 1em;
+    padding-left: 1.8em;
+    position: relative;
+  }
+
+  .dropdownAmenities p::after{
+    content: '';
+    height: 10px;
+    width: 10px;
+    background: #A87D07;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform:  translateY(-50%) rotate(45deg); 
+    left: 3px;
+    /* transform: scale(0.5) translate(-100%, -100%); */
+  }
+
+  .bgAmenitiesResponsive{
+    background: #f8f8f8;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 5vw;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  .unflex{
+    display: block;
+  }
+
+  .leftFlexService{
+    width: 100%;
+    text-align: center;
+  }
+
+  .leftFlexService .pd{
+    padding: 0
+  }
+
+  .rightFlexService{
+    display: none;
+  }
+
+  .flex_service{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .hPicService span{
+    position: unset !important;
+  }
+
+  .imgScale:hover .hPicService{
+    height: 40%;
+  }
+
+  .hPicService::before{
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s ease-in-out 0.3s;
+  }
+
+  .imgScale:hover .hPicService::before{
+    background: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .imgScale .fontInPic{
+    top: 50%;
+  }
+
+
+}
+
+
 

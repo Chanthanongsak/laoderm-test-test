@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 // import scrollBlack from "../menu_navbar/scrollBlack";
 import Link from "next/link";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 export default function OneBedRooms() {
   useEffect(() => {
@@ -23,6 +25,13 @@ export default function OneBedRooms() {
 
       // document.querySelector(".Comps_enquires__n7_FT a:hover").style.color =
       //   "white";
+
+      const nodeList = document.querySelectorAll(
+        ".Comps_borderRightNav__EZD10 span"
+      );
+      for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].style.backgroundColor = "rgb(66, 65, 63)";
+      }
 
       document
         .querySelector(".Comps_enquires__n7_FT")
@@ -61,254 +70,284 @@ export default function OneBedRooms() {
     document.getElementsByTagName("body")[0].style.overflow = "visible";
   }
 
+  const roomLoop = [
+    "/1bedroom (5).jpg",
+    "/1bedroom (5).jpg",
+    "/1bedroom (5).jpg",
+    "/1bedroom (5).jpg",
+    "/1bedroom (5).jpg",
+    "/1bedroom (5).jpg",
+  ];
+
   return (
-    <div className="content">
-      <div className="content-book-room">
-        <div className="container-content-enquires">
-          <a
-            // href="#"
-            onClick={() => onBookClick("close-book")}
-            className="btn-close "
-          >
-            <Image src="/close.png" alt="" height="100" width="100" />
-          </a>
+    <>
+      <div className="content">
+        <div className="content-book-room">
+          <div className="container-content-enquires">
+            <a
+              // href="#"
+              onClick={() => onBookClick("close-book")}
+              className="btn-close "
+            >
+              <Image src="/close.png" alt="" height="100" width="100" />
+            </a>
 
-          <div className="checkbox">
+            <div className="checkbox">
+              <p>
+                I would like to view:{" "}
+                <span className="fbold"> One Bedroom Suite </span>
+              </p>
+              <div className="date">
+                <div className="Text_Input-date">
+                  <div className="col-date">
+                    <p>Date of visit</p>
+                    <input placeholder="Day / Month / Year " type="text" />
+                  </div>
+                  <div className="col-date">
+                    <p>My price range is</p>
+                    <input placeholder="less 1,800 $" type="text" />
+                  </div>
+                </div>
+                <div className="Text_Input-">
+                  <input
+                    placeholder="Please specify your enquiry hear"
+                    type="text"
+                  />
+                </div>
+                <div className="Text-bottom">
+                  <p>
+                    Please verify that your email address and phone number are
+                    accurate. We will contact you shortly.
+                  </p>
+                  <p>
+                    Please note that showcase units are only accessible by
+                    appointment
+                  </p>
+                </div>
+              </div>
+              <div className="btn-submit">
+                <button>SUBMIT</button>
+              </div>
+              <div className="contact">
+                <p>You can also contact our Sales directly:</p>
+                <div className="contact-Email">
+                  <Image alt="" src="/Asset 1.png" width="30" height="20" />
+                  <p>Dosmlaos@souphattra.com</p>
+                </div>
+                <div className="contact-tel">
+                  <Image
+                    alt=""
+                    src="/Asset 2.png"
+                    // style={{ width: 20 }}
+                    width="20"
+                    height="20"
+                  />
+                  <p> 856 20 2222 7735</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container-content">
+          <div className="pp max-1280">
             <p>
-              I would like to view:{" "}
-              <span className="fbold"> One Bedroom Suite </span>
+              The 1 bedroom suites are the perfect business accommodation,
+              offering ample space for 1 or 2-person stays with up to 82 sqm.
+              They are impeccably well-designed and feature all the desired
+              amenities for the modern traveler.
             </p>
-            <div className="date">
-              <div className="Text_Input-date">
-                <div className="col-date">
-                  <p>Date of visit</p>
-                  <input placeholder="Day / Month / Year " type="text" />
-                </div>
-                <div className="col-date">
-                  <p>My price range is</p>
-                  <input placeholder="less 1,800 $" type="text" />
-                </div>
-              </div>
-              <div className="Text_Input-">
-                <input
-                  placeholder="Please specify your enquiry hear"
-                  type="text"
-                />
-              </div>
-              <div className="Text-bottom">
-                <p>
-                  Please verify that your email address and phone number are
-                  accurate. We will contact you shortly.
-                </p>
-                <p>
-                  Please note that showcase units are only accessible by
-                  appointment
-                </p>
-              </div>
-            </div>
-            <div className="btn-submit">
-              <button>SUBMIT</button>
-            </div>
-            <div className="contact">
-              <p>You can also contact our Sales directly:</p>
-              <div className="contact-Email">
-                <Image alt="" src="/Asset 1.png" width="30" height="20" />
-                <p>Dosmlaos@souphattra.com</p>
-              </div>
-              <div className="contact-tel">
-                <Image
-                  alt=""
-                  src="/Asset 2.png"
-                  // style={{ width: 20 }}
-                  width="20"
-                  height="20"
-                />
-                <p> 856 20 2222 7735</p>
-              </div>
-            </div>
           </div>
-        </div>
-      </div>
+          <div className="Text-img">
+            <div className="crop-image max-1280">
+              <div className="image-content">
+                <div className="img-first">
+                  <Carousel>
+                    {roomLoop.map((room) => {
+                      return (
+                        <Image
+                          alt="/"
+                          src={room}
+                          className="img-Slide"
+                          // width="714"
+                          // height="406"
+                          width="1000"
+                          height="568"
+                        />
+                      );
+                    })}
+                  </Carousel>
 
-      <div className="container-content">
-        <div className="pp max-1280">
-          <p>
-            The 1 bedroom suites are the perfect business accommodation,
-            offering ample space for 1 or 2-person stays with up to 82 sqm. They
-            are impeccably well-designed and feature all the desired amenities
-            for the modern traveler.
-          </p>
-        </div>
-        <div className="Text-img">
-          <div className="crop-image max-1280">
-            <div className="image-content">
-              <div className="img-first">
-                <Image
-                  alt="/"
-                  src="/1bedroom (5).jpg"
-                  className="img-Slide"
-                  // width="714"
-                  // height="406"
-                  width="1000"
-                  height="568"
-                />
-              </div>
-              <div className="deatail-room">
-                <div className="text-deatil-room">
-                  <p>One Bedroom Suite</p>
-                  <p>Available for daily stay, weekly and monthly stays.</p>
-                </div>
-                <div className="col-room-book">
-                  <div className="room-col">
-                    <div className="room-icon">
+                  <div className="div2">
+                    <div className="icon-right-left">
                       <Image
-                        src="/Asset 6.png"
-                        alt="/"
                         width="1000"
                         height="1000"
-                      />
-                      <p>1st floor to 5th floor</p>
-                    </div>
-                    <div className="room-icon">
-                      <Image
-                        src="/Asset 11.png"
+                        src="/left-arrow-angle-black-circular-interface-symbol_icon-icons.com_72951.png"
                         alt="/"
+                      />
+
+                      <Image
                         width="1000"
                         height="1000"
-                      />
-                      <p>82 Sqm</p>
-                    </div>
-                    <div className="room-icon">
-                      <Image
-                        src="/Asset 10.png"
+                        className="control-arrow control-next"
+                        src="/right-arrow-angle-black-circular-interface-symbol_icon-icons.com_72951.png"
                         alt="/"
-                        width="1000"
-                        height="1000"
                       />
-                      <p>1 Bedroom</p>
-                    </div>
-                    <div className="room-icon">
-                      <Image
-                        src="/Asset 8.png"
-                        alt="/"
-                        width="1000"
-                        height="1000"
-                      />
-                      <p>1 Bathroom</p>
-                    </div>
-                    <div className="room-icon">
-                      <Image
-                        src="/Car-595b40b75ba036ed117d6eb7 (2).png"
-                        alt="/"
-                        width="1000"
-                        height="1000"
-                      />
-                      <p>1 Car parking space</p>
-                    </div>
-                    <div className="room-icon">
-                      <Image
-                        src="/Asset 3.png"
-                        alt="/"
-                        width="1000"
-                        height="1000"
-                      />
-                      <a href="#">
-                        <p>See flow plan</p>
-                      </a>
                     </div>
                   </div>
-                  <div className="btn-book">
-                    <a onClick={() => onBookClick("book1")} href="#">
-                      BOOK NOW
-                    </a>
+                </div>
+                <div className="deatail-room">
+                  <div className="content-box">
+                    <div className="text-deatil-room">
+                      <p>One Bedroom Suite</p>
+                      <p>Available for daily stay, weekly and monthly stays.</p>
+                    </div>
+                    <div className="col-room-book">
+                      <div className="room-col">
+                        <div className="room-icon">
+                          <Image
+                            src="/Asset 6.png"
+                            alt="/"
+                            width="1000"
+                            height="1000"
+                          />
+                          <p>1st floor to 5th floor</p>
+                        </div>
+                        <div className="room-icon">
+                          <Image
+                            src="/Asset 11.png"
+                            alt="/"
+                            width="1000"
+                            height="1000"
+                          />
+                          <p>82 Sqm</p>
+                        </div>
+                        <div className="room-icon">
+                          <Image
+                            src="/Asset 10.png"
+                            alt="/"
+                            width="1000"
+                            height="1000"
+                          />
+                          <p>1 Bedroom</p>
+                        </div>
+                        <div className="room-icon">
+                          <Image
+                            src="/Asset 8.png"
+                            alt="/"
+                            width="1000"
+                            height="1000"
+                          />
+                          <p>1 Bathroom</p>
+                        </div>
+                        <div className="room-icon">
+                          <Image
+                            src="/Car-595b40b75ba036ed117d6eb7 (2).png"
+                            alt="/"
+                            width="1000"
+                            height="1000"
+                          />
+                          <p>1 Car parking space</p>
+                        </div>
+                        <div className="room-icon">
+                          <Image
+                            src="/Asset 3.png"
+                            alt="/"
+                            width="1000"
+                            height="1000"
+                          />
+                          <a href="#">
+                            <p>See flow plan</p>
+                          </a>
+                        </div>
+                      </div>
+                      <div className="btn-book">
+                        <a onClick={() => onBookClick("book1")} href="#">
+                          BOOK NOW
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="div2">
-                <div className="icon-right-left">
-                  <div>
+            </div>
+          </div>
+          <div className="row-bar">
+            <div className="container-row">
+              <div className="room-feature">
+                <p>Room Features</p>
+                <div className="box-img">
+                  <Image src="/fac-34.jpg" alt="/" width="1000" height="563" />
+
+                  <div className="box-text">
+                    <p>High Speed Internet Access</p>
+                    <p>Air Conditioning</p>
+                    <p>In-Room Safety Box</p>
+                    <p>Cable TV</p>
+                    <p>Ironing Facilities</p>
+                    <p>Smart Cable TV</p>
+                    <p>Bathtube</p>
+                    <p>Fully Equipped Kitchen</p>
+                  </div>
+                </div>
+              </div>
+              <div className="room-feature">
+                <p>Service and Other Facilities</p>
+                <div className="box-img">
+                  <Image src="/fac-34.jpg" alt="/" width="1000" height="563" />
+
+                  <div className="box-text">
+                    <p>24 Hours Reception</p>
+                    <p>24 Security</p>
+                    <p>24 Concierge</p>
+                    <p>Shuttle Bus Service</p>
+                    <p>Cleaning Service</p>
+                    <p>10 - 15% Discount for F&amp;B (Long Stay)</p>
+                    <p>Meeting room Access</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="other-room">
+            <div className="Text-">
+              <p>Also Available</p>
+            </div>
+            <div className="col-room-more">
+              <div className="col-image-room max-1280">
+                <div className="col-left-room">
+                  <div className="left-img">
                     <Image
-                      width="1000"
-                      height="1000"
-                      src="/left-arrow-angle-black-circular-interface-symbol_icon-icons.com_72951.png"
+                      src="/3bed-1.jpg"
                       alt="/"
+                      width="1000"
+                      height="960"
                     />
+                    <div className="view-detail">
+                      <p>Two Bedroom Suite</p>
+                      <p>SIZE: 114 sqm</p>
+                      <Link href="/rooms/twoBedRooms">
+                        <button>VIEW DETAILS</button>
+                      </Link>
+                    </div>
                   </div>
-                  <div>
+                </div>
+                <div className="col-left-room">
+                  <div className="left-img">
                     <Image
-                      width="1000"
-                      height="1000"
-                      src="/right-arrow-angle-black-circular-interface-symbol_icon-icons.com_72951.png"
+                      src="/3bed-5.jpg"
                       alt="/"
+                      width="1000"
+                      height="960"
                     />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row-bar">
-          <div className="container-row max-1280">
-            <div className="room-feature">
-              <p>Room Features</p>
-              <div className="box-img">
-                <Image src="/fac-34.jpg" alt="/" width="1000" height="563" />
-                <div className="box-text">
-                  <p>High Speed Internet Access</p>
-                  <p>Air Conditioning</p>
-                  <p>In-Room Safety Box</p>
-                  <p>Cable TV</p>
-                  <p>Ironing Facilities</p>
-                  <p>Smart Cable TV</p>
-                  <p>Bathtube</p>
-                  <p>Fully Equipped Kitchen</p>
-                </div>
-              </div>
-            </div>
-            <div className="room-feature">
-              <p>Service and Other Facilities</p>
-              <div className="box-img">
-                <Image src="/fac-34.jpg" alt="/" width="1000" height="563" />
-                <div className="box-text">
-                  <p>24 Hours Reception</p>
-                  <p>24 Security</p>
-                  <p>24 Concierge</p>
-                  <p>Shuttle Bus Service</p>
-                  <p>Cleaning Service</p>
-                  <p>10 - 15% Discount for F&amp;B (Long Stay)</p>
-                  <p>Meeting room Access</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="other-room">
-          <div className="Text-">
-            <p>Also Available</p>
-          </div>
-          <div className="col-room-more">
-            <div className="col-image-room max-1280">
-              <div className="col-left-room">
-                <div className="left-img">
-                  <Image src="/3bed-1.jpg" alt="/" width="1000" height="960" />
-                  <div className="view-detail">
-                    <p>Two Bedroom Suite</p>
-                    <p>SIZE: 114 sqm</p>
-                    <Link href="/rooms/twoBedRooms">
-                      <button>VIEW DETAILS</button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col-left-room">
-                <div className="left-img">
-                  <Image src="/3bed-5.jpg" alt="/" width="1000" height="960" />
-                  <div className="view-detail">
-                    <p>Three Bedroom Suite</p>
-                    <p>SIZE: 147 sqm</p>
-                    <Link href="/rooms/threeBedRooms">
-                      <button>VIEW DETAILS</button>
-                    </Link>
+                    <div className="view-detail">
+                      <p>Three Bedroom Suite</p>
+                      <p>SIZE: 147 sqm</p>
+                      <Link href="/rooms/threeBedRooms">
+                        <button>VIEW DETAILS</button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -316,6 +355,15 @@ export default function OneBedRooms() {
           </div>
         </div>
       </div>
-    </div>
+      {/* <div className="test-carousel">
+        <img alt="/" src="/3bed-1.jpg" width="1000" height="568" />
+
+        <img alt="/" src="/1bedroom (5).jpg" width="1000" height="568" />
+      </div>
+      <div>
+        <button className="previous bt">{"<"}</button>
+        <button className="next bt">{">"}</button>
+      </div> */}
+    </>
   );
 }

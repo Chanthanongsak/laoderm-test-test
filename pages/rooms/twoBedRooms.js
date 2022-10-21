@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 // import scrollBlack from "../menu_navbar/scrollBlack";
 import Link from "next/link";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 export default function TwoBedRooms() {
   useEffect(() => {
@@ -23,6 +25,13 @@ export default function TwoBedRooms() {
 
       // document.querySelector(".Comps_enquires__n7_FT a:hover").style.color =
       //   "white";
+
+      const nodeList = document.querySelectorAll(
+        ".Comps_borderRightNav__EZD10 span"
+      );
+      for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].style.backgroundColor = "rgb(66, 65, 63)";
+      }
 
       document
         .querySelector(".Comps_enquires__n7_FT")
@@ -60,6 +69,12 @@ export default function TwoBedRooms() {
     document.querySelector(".content-book-room").style.display = "none";
     document.getElementsByTagName("body")[0].style.overflow = "visible";
   }
+
+  const roomLoop = [
+    "/1bedroom (5).jpg",
+    "/1bedroom (5).jpg",
+    "/1bedroom (5).jpg",
+  ];
 
   return (
     <div className="content">
@@ -142,104 +157,109 @@ export default function TwoBedRooms() {
           <div className="crop-image max-1280">
             <div className="image-content">
               <div className="img-first">
-                <Image
-                  alt="/"
-                  src="/1bedroom (5).jpg"
-                  className="img-Slide"
-                  // width="714"
-                  // height="406"
-                  width="1000"
-                  height="568"
-                />
-              </div>
-              <div className="deatail-room">
-                <div className="text-deatil-room">
-                  <p>Two Bedroom Suite</p>
-                  <p></p>
-                </div>
-                <div className="col-room-book">
-                  <div className="room-col">
-                    <div className="room-icon">
+                <Carousel>
+                  {roomLoop.map((room) => {
+                    return (
                       <Image
-                        src="/Asset 6.png"
                         alt="/"
+                        src={room}
+                        className="img-Slide"
+                        // width="714"
+                        // height="406"
                         width="1000"
-                        height="1000"
+                        height="568"
                       />
-                      <p>2nd floor to 5th floor</p>
-                    </div>
-                    <div className="room-icon">
-                      <Image
-                        src="/Asset 11.png"
-                        alt="/"
-                        width="1000"
-                        height="1000"
-                      />
-                      <p>114 Sqm</p>
-                    </div>
-                    <div className="room-icon">
-                      <Image
-                        src="/Asset 10.png"
-                        alt="/"
-                        width="1000"
-                        height="1000"
-                      />
-                      <p>2 Bedroom</p>
-                    </div>
-                    <div className="room-icon">
-                      <Image
-                        src="/Asset 8.png"
-                        alt="/"
-                        width="1000"
-                        height="1000"
-                      />
-                      <p>2 Bathroom</p>
-                    </div>
-                    <div className="room-icon">
-                      <Image
-                        src="/Car-595b40b75ba036ed117d6eb7 (2).png"
-                        alt="/"
-                        width="1000"
-                        height="1000"
-                      />
-                      <p>1 Car parking space</p>
-                    </div>
-                    <div className="room-icon">
-                      <Image
-                        src="/Asset 3.png"
-                        alt="/"
-                        width="1000"
-                        height="1000"
-                      />
-                      <a href="#">
-                        <p>See flow plan</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="btn-book">
-                    <a onClick={() => onBookClick("book1")} href="#">
-                      BOOK NOW
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="div2">
-                <div className="icon-right-left">
-                  <div>
+                    );
+                  })}
+                </Carousel>
+                <div className="div2">
+                  <div className="icon-right-left">
                     <Image
                       width="1000"
                       height="1000"
                       src="/left-arrow-angle-black-circular-interface-symbol_icon-icons.com_72951.png"
                       alt="/"
                     />
-                  </div>
-                  <div>
+
                     <Image
                       width="1000"
                       height="1000"
                       src="/right-arrow-angle-black-circular-interface-symbol_icon-icons.com_72951.png"
                       alt="/"
                     />
+                  </div>
+                </div>
+              </div>
+              <div className="deatail-room">
+                <div className="content-box">
+                  <div className="text-deatil-room">
+                    <p>Two Bedroom Suite</p>
+                    <p></p>
+                  </div>
+                  <div className="col-room-book">
+                    <div className="room-col">
+                      <div className="room-icon">
+                        <Image
+                          src="/Asset 6.png"
+                          alt="/"
+                          width="1000"
+                          height="1000"
+                        />
+                        <p>2nd floor to 5th floor</p>
+                      </div>
+                      <div className="room-icon">
+                        <Image
+                          src="/Asset 11.png"
+                          alt="/"
+                          width="1000"
+                          height="1000"
+                        />
+                        <p>114 Sqm</p>
+                      </div>
+                      <div className="room-icon">
+                        <Image
+                          src="/Asset 10.png"
+                          alt="/"
+                          width="1000"
+                          height="1000"
+                        />
+                        <p>2 Bedroom</p>
+                      </div>
+                      <div className="room-icon">
+                        <Image
+                          src="/Asset 8.png"
+                          alt="/"
+                          width="1000"
+                          height="1000"
+                        />
+                        <p>2 Bathroom</p>
+                      </div>
+                      <div className="room-icon">
+                        <Image
+                          src="/Car-595b40b75ba036ed117d6eb7 (2).png"
+                          alt="/"
+                          width="1000"
+                          height="1000"
+                        />
+                        <p>1 Car parking space</p>
+                      </div>
+                      <div className="room-icon">
+                        <Image
+                          src="/Asset 3.png"
+                          alt="/"
+                          width="1000"
+                          height="1000"
+                        />
+                        <a href="#">
+                          <p>See flow plan</p>
+                        </a>
+                      </div>
+                    </div>
+                    <div className="btn-book">
+                      <a onClick={() => onBookClick("book1")} href="#">
+                        BOOK NOW
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

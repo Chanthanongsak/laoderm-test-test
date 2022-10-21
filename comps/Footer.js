@@ -9,6 +9,7 @@ import sms from "../images/message-removebg-preview.png";
 import tel from "../images/tel-removebg-preview.png";
 import brand from "../images/sh-logo-black-removebg-preview.png";
 import lune from "../images/bg-lune.png";
+import Link from "next/link";
 
 function Footer() {
   const [book, setBook] = useState("book");
@@ -211,11 +212,28 @@ function Footer() {
               </div>
             </div>
             <div className={styles.input}>
-              <input placeholder="ROOMS" />
-              <input placeholder="SERVICES" />
+              {/* <input placeholder="ROOMS" /> */}
+              {/* <input placeholder="SERVICES" />
               <input placeholder="GALLERY" />
               <input placeholder="CONTACT" />
-              <input placeholder="CAREERS" />
+              <input placeholder="CAREERS" /> */}
+
+              <Link href="/rooms">
+                <a>ROOMS</a>
+              </Link>
+
+              <Link href="/services">
+                <a>SERVICES</a>
+              </Link>
+              <Link href="/gallery">
+                <a>GALLERY</a>
+              </Link>
+              <Link href="/contact">
+                <a>CONTACT</a>
+              </Link>
+              <Link href="/careers">
+                <a>CAREERS</a>
+              </Link>
             </div>
           </div>
         </div>

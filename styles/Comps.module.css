@@ -100,9 +100,19 @@
 }
 
 .input{
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: inherit;
+  justify-content: inherit; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+
+}
+
+.input a{
+  border-bottom: 1px solid ;
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 .logo_black{
@@ -222,7 +232,7 @@
 .fix{
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   color: #fff;
   transition: all 0.3s ease-in-out;
@@ -249,6 +259,7 @@
 
 .enquires a{
   cursor: pointer;
+  margin-bottom: 4px;
 }
 
 /* .enquires a:hover{
@@ -282,13 +293,13 @@
   /* position: unset !important; */
   width: 25px !important;
   height: 25px !important;
-  margin-top: 4px !important;
+  /* margin-top: 4px !important; */
 }
 
 .spanUnsetY span{
   width: 36px !important;
   height: 25px !important;
-  margin-top: 4px !important;
+  /* margin-top: 4px !important; */
 }
 
 .navHeight{
@@ -308,14 +319,19 @@
   position: absolute;
   width: 2px;
   height: 15px;
-  top: 4px;
+  top: 1px;
   background: white;
   right: 20px;
 }
 
+
 @media only screen and (max-width: 1200px){
   .footer{
     padding: 30px;
+  }
+
+  .input a{
+    font-size: 12px;
   }
 }
 
@@ -353,13 +369,212 @@
   }
 
   .input{
-    justify-content: center;
+    flex-direction: column;
   }
 
   .input input{
     margin-bottom: 15px;
   }
 
+  .footer_lg div{
+    padding: 0 10px;
+  }
 
+  .social{
+    margin-top: 20px;
+  }
 
+  .input input{
+    padding: 10px 0;
+    font-size: 11px;
+  }
+
+  .input{
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+  }
+
+}
+
+.under_navbar_responsive{
+  display: none;
+}
+
+.bg_menu_nav_responsive{
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+
+  .container_nav{
+    display: none;
+  }
+
+  .under_navbar_responsive{
+    display: block;
+  }
+  
+  .container_nav_responsive{
+    width: 50px;
+    height: 50px;
+    /* background: teal; */
+    cursor: pointer;
+  }
+  
+  .box_nav_responsive{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .line_in_nav_responsive{
+    width: 60%;
+    height: 2px;
+    background: #42413F;
+    position: relative;
+  }
+  
+  .line_in_nav_responsive::after,.line_in_nav_responsive::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #42413F;
+    position: absolute;
+  }
+  
+  .line_in_nav_responsive::after{
+    top: -8px
+  }
+  
+  .line_in_nav_responsive::before{
+    top: 8px;
+  }
+  
+  .under_navbar_responsive{
+    position: fixed;
+  z-index: 2;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  top: 50px;
+  transition: all 0.5s ease-in-out;
+  background: #42413F;
+  max-height: 0;
+  overflow: hidden;
+  /* max-height: 0; */
+  }
+  
+  
+  
+  
+  
+  .under_navbar_responsive .menu{
+    display: unset;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .under_navbar_responsive .menu .borderRightNav{
+    padding: 20px 0;
+    border-bottom: 1px solid grey;
+    width: 50vw;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .under_navbar_responsive .menu .borderRightNav:nth-last-child(1){
+    border: none;
+  }
+
+  .flex_contact{
+    display: block;
+  }
+
+  .flex_contact .flex{
+    justify-content: center;
+  }
+
+  .line_brown{
+    display: none;
+  }
+
+  .btnContact{
+    margin-top: 30px;
+  }
+
+  .footer_lg{
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .footer_lg div{
+    width: 33.33%;
+    padding: 20px;
+  }
+
+  .footer .flex{
+    display: block;
+  }
+
+  .address, .map, .input{
+    width: 100%;
+  }
+
+  .footer .social{
+    margin-bottom: 20px;
+  }
+
+  .map{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .map span{
+    width: 50px !important;
+    left: 50% !important; 
+    transform: translateX(-50%);
+  }
+
+  .input{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bg_menu_nav_responsive{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .logo_nav_responsive{
+    display: flex;
+    align-items: center;
+  }
+
+  .enquires_responsive{
+    background: rgb(203, 182, 126);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .span_between_logo{width: 2px;
+    height: 70%;
+    background: #E2E1E0;
+    margin-right: 10px;}
+
+}
+
+.bg_menu_nav_responsive{
+  background: white;
+}
+
+.dropdownLine{
+  width: 2px;
+  height: 20px;
+  background: teal;
 }

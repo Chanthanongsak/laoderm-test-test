@@ -53,6 +53,13 @@ export default function Service() {
       document
         .querySelector(".Comps_enquires__n7_FT")
         .classList.remove("eqOverZero");
+
+      const nodeList = document.querySelectorAll(
+        ".Comps_borderRightNav__EZD10 .lineRightNavBar"
+      );
+      for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].style.backgroundColor = "white";
+      }
     };
 
     {
@@ -153,7 +160,7 @@ export default function Service() {
 
       <div className={[styles.bg_coconut].join(" ")}>
         <div className={styles.container}>
-          <div className={[styles.flex, styles.mg50].join(" ")}>
+          <div className={[styles.flex, styles.mg50, styles.unflex].join(" ")}>
             <div
               data-aos="fade-right"
               data-aos-duration="1000"
@@ -225,10 +232,11 @@ export default function Service() {
                     styles.inheritImg,
                     styles.heightImgHoverOverlay,
                     styles.posrelative,
-                    styles.z100,
                   ].join(" ")}
                 >
-                  <Image alt="/" src={h.img} width="1000" height="730" />
+                  <div className={[styles.hPicService]}>
+                    <Image alt="/" src={h.img} width="1000" height="730" />
+                  </div>
                   <div className={styles.fontInPic}>
                     <h3>{h.h1}</h3>
                   </div>

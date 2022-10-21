@@ -44,6 +44,13 @@ export default function Gallery() {
       document
         .querySelector(".Comps_enquires__n7_FT")
         .classList.add("eqOverZero");
+
+      const nodeList = document.querySelectorAll(
+        ".Comps_borderRightNav__EZD10 span"
+      );
+      for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].style.backgroundColor = "rgb(66, 65, 63)";
+      }
     };
 
     {
