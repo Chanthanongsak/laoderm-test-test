@@ -2393,8 +2393,7 @@ input[type="checkbox"]:checked::after {
   }
 
   .content-row-fac{
-    margin-bottom: 10px;
-    padding-bottom: 42px;
+    margin-bottom: 30px;
   }
 
   .content-row-fac a{
@@ -2536,6 +2535,10 @@ input[type="checkbox"]:checked::after {
     overflow: scroll;
     margin-bottom: 5px;
     padding-left: 20px;
+  }
+
+  .content-book, .content-book-room, .content-enquires{
+    padding: 0 0 100px;
   }
   
 }
