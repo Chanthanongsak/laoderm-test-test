@@ -915,7 +915,7 @@ text-align: center;
     width: 100%;
     height: unset;
     top: unset;
-
+    padding: 20px 30px 30px;
   }
 
   .absoluteBox h1{

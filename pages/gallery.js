@@ -127,7 +127,7 @@ export default function Gallery() {
             Facilities
           </a>
         </div>
-        <section>
+        <section className="facilities-scroll-X">
           <div className="content-row-fac">
             <a
               onClick={() => onTabClick("tab5")}

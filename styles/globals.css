@@ -2134,6 +2134,11 @@ input[type="checkbox"]:checked::after {
 }
 
 @media only screen and (max-width: 992px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
   .main-cover{
     height: unset
   }
@@ -2362,6 +2367,7 @@ input[type="checkbox"]:checked::after {
 }
 
 @media only screen and (max-width: 600px){
+
   .slide .Home_bgImg__ZhnTg{
     height: 100vh;
   }
@@ -2389,8 +2395,10 @@ input[type="checkbox"]:checked::after {
   .content-row-fac{
     margin-bottom: 10px;
     padding-bottom: 42px;
-    overflow: scroll;
-    display: block ruby;
+  }
+
+  .content-row-fac a{
+    width: max-content;
   }
   
   .bg-careers{
@@ -2521,6 +2529,13 @@ input[type="checkbox"]:checked::after {
     color: white;
     font-weight: bold;
     font-size: 15px;
+  }
+
+  .facilities-scroll-X{
+    display: flex;
+    overflow: scroll;
+    margin-bottom: 5px;
+    padding-left: 20px;
   }
   
 }
